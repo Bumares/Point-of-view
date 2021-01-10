@@ -4,20 +4,20 @@
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://industrial.v1.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.2545, 31.3206 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 63.9648, 15.6755, 0.61322, 16.2337, 0.334137, 0.884186, 63.6857, 1.16327 )
 
-[sub_resource type="NavigationPolygon" id=10]
+[sub_resource type="NavigationPolygon" id=3]
 vertices = PoolVector2Array( 17, 0, 0, 0, 0, 0, 17, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 17, 15.6755, 0, 15.6755, 0, 0, 17, 0 )
 
-[sub_resource type="TileSet" id=9]
+[sub_resource type="TileSet" id=5]
 0/name = "industrial.v1.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -28,14 +28,14 @@ points = PoolVector2Array( 17, 15.6755, 0, 15.6755, 0, 0, 17, 0 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 7 )
+0/shape = SubResource( 2 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -47,17 +47,17 @@ points = PoolVector2Array( 17, 15.6755, 0, 15.6755, 0, 0, 17, 0 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
-1/navigation = SubResource( 10 )
+1/navigation = SubResource( 3 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 8 )
+1/shape = SubResource( 4 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -70,7 +70,7 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -0.210228, 0.105114 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
 texture = ExtResource( 1 )
@@ -82,6 +82,6 @@ zoom = Vector2( 0.743, 0.646 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -1, 4 )
-tile_set = SubResource( 9 )
+tile_set = SubResource( 5 )
 format = 1
 tile_data = PoolIntArray( -196599, 0, 0, -131065, 0, 0, -131064, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 131076, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0 )
