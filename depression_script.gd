@@ -18,6 +18,15 @@ export (int) var delay = 2
 #TARGETING SYSTEM
 func _physics_process(delta):
 	
+	
+	if Input.is_action_just_pressed("E")&& self.visible == true:
+		self.visible = false
+	else:
+		if Input.is_action_just_pressed("E")&& self.visible == false:
+			self.visible = true
+			
+	
+	
 	var player = $"../Player"
 
 	if (Vector2(stepify(position.x, 1), stepify(position.y, 1))) == (Vector2(stepify(poloha_x, 1), stepify(poloha_y, 1))) or direction == null:
@@ -54,3 +63,8 @@ func on_timeout_complete():
 	
 	
 
+
+
+func _on_Area2D_body_entered(body):
+	if body.get("TYPE")== "player":
+		 get_tree().reload_current_scene()
