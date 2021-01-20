@@ -7,7 +7,7 @@ export (int) var gravity = 1200
 var velocity = Vector2()
 var jumping = false
 
-const TYPE = "player"
+const TYPE ="player"
 
 
 func get_input():
@@ -24,16 +24,20 @@ func get_input():
 	if left:
 		velocity.x -= run_speed
 
-
-
 func _physics_process(delta):
-		get_input()
-		velocity.y += gravity * delta
-		if jumping and is_on_floor():
-			jumping = false
-			
-		velocity = move_and_slide(velocity, Vector2(0, -1))
+	get_input()
+	velocity.y += gravity * delta
+	if jumping and is_on_floor():
+		jumping = false
+	velocity = move_and_slide(velocity, Vector2(0, -1))
 
-
+# Called when the node enters the scene tree for the first time.
 
 	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+
