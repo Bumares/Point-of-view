@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Point of view"
-run/main_scene="res://Node2D.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -60,6 +60,12 @@ PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
