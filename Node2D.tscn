@@ -105,8 +105,8 @@ tile_data = PoolIntArray( -458740, 0, 0, -393205, 0, 0, -196612, 0, 0, -196611, 
 [node name="depression" type="KinematicBody2D" parent="."]
 position = Vector2( -177.298, 9.51364 )
 script = ExtResource( 5 )
-speed_x = 70
-speed_y = 70
+speed_x = 100
+speed_y = 100
 
 [node name="Sprite" type="Sprite" parent="depression"]
 position = Vector2( 3.47314, 0.223419 )

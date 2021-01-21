@@ -14,29 +14,36 @@ var poloha_y =1
 var timer = null
 var wait = false
 export (int) var delay = 2
+var locktarget = false
 
-#TARGETING SYSTEM
+
 func _physics_process(delta):
 	
-	
+	#VIEW SYSTEM
 	if Input.is_action_just_pressed("E")&& self.visible == true:
 		self.visible = false
 	else:
 		if Input.is_action_just_pressed("E")&& self.visible == false:
 			self.visible = true
-			
 	
 	
+	#TARGETING SYSTEM
 	var player = $"../Player"
 
-	if (Vector2(stepify(position.x, 1), stepify(position.y, 1))) == (Vector2(stepify(poloha_x, 1), stepify(poloha_y, 1))) or direction == null:
+	if abs(stepify(position.x, 1) - stepify(poloha_x, 1)) <= 1 and abs(stepify(position.y, 1) - stepify(poloha_y, 1)) <= 1 or direction == null:
 		timer.start()
 		wait = true
 		direction = global_position.direction_to(player.global_position)
 		poloha_x = player.position.x
 		poloha_y = player.position.y
-		
-		
+	
+	
+	
+	if locktarget == true:
+		direction = global_position.direction_to(player.global_position)
+		poloha_x = player.position.x
+		poloha_y = player.position.y
+		locktarget = false
 	
 	#MOVEMENT SYSTEM
 	if wait == false:
@@ -54,15 +61,8 @@ func _ready():
 	
 func on_timeout_complete():
 	wait = false
+	locktarget = true
 	
-	
-	
-	
-	
-	
-	
-	
-
 
 
 func _on_Area2D_body_entered(body):
