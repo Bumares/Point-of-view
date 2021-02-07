@@ -25,6 +25,16 @@ func _physics_process(delta):
 	else:
 		if Input.is_action_just_pressed("E")&& self.visible == false:
 			self.visible = true
+	if Input.is_action_just_pressed("ui_left"):
+		self.visible = true
+	if Input.is_action_just_pressed("ui_right"):
+		self.visible = true
+	if Input.is_action_just_pressed("ui_select"):
+		self.visible = true
+	if Input.is_action_just_pressed("ui_down"):
+		self.visible = true
+	if Input.is_action_just_pressed("ui_up"):
+		self.visible = true
 	
 	
 	#TARGETING SYSTEM
