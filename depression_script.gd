@@ -30,7 +30,7 @@ func _physics_process(delta):
 	#TARGETING SYSTEM
 	var player = $"../Player"
 
-	if abs(stepify(position.x, 1) - stepify(poloha_x, 1)) <= 1 and abs(stepify(position.y, 1) - stepify(poloha_y, 1)) <= 1 or direction == null:
+	if abs(stepify(position.x, 1) - stepify(poloha_x, 1)) <= 5 and abs(stepify(position.y, 1) - stepify(poloha_y, 1)) <= 5 or direction == null:
 		timer.start()
 		wait = true
 		direction = global_position.direction_to(player.global_position)

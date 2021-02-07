@@ -34,7 +34,7 @@ func handle_selection(_currnet_selection):
 		get_parent().add_child(levelselect.instance())
 		queue_free()
 	elif current_selection == 2:
-		get_parent().add_child(playground.instance())
+		get_tree().change_scene("res://Node2D.tscn")
 		queue_free()
 
 

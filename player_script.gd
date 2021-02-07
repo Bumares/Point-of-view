@@ -3,9 +3,13 @@ extends KinematicBody2D
 export (int) var run_speed = 200
 export (int) var jump_speed = -600
 export (int) var gravity = 1200
+export(int) var upSpeed = 10
 
 var velocity = Vector2()
 var jumping = false
+var ladder_on = false
+var motion = Vector2()
+const UP = Vector2(0, -100)
 
 const TYPE = "player"
 
@@ -33,7 +37,33 @@ func _physics_process(delta):
 			jumping = false
 			
 		velocity = move_and_slide(velocity, Vector2(0, -1))
+		
+		
+		if ladder_on == true:
+			gravity =0;
+			if Input.is_action_pressed("ui_up"):
+				motion.y -= upSpeed
+			elif Input.is_action_pressed ("ui_down"):
+				motion.y += upSpeed
+		
+			else:
+				motion.y = 0
+		
+		else:
+			 gravity = 1200
+		
+		
+		motion = move_and_slide(motion, UP)
 
 
 
 	
+
+
+	
+
+
+
+
+
+
