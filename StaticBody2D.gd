@@ -1,4 +1,6 @@
-extends KinematicBody2D
+extends StaticBody2D
+func _ready():
+	self.visible = false
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("E")&& self.visible == true:
@@ -7,22 +9,13 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("E")&& self.visible == false:
 			self.visible = true
 	if Input.is_action_just_pressed("ui_left"):
-		self.visible = true
+		self.visible = false
 	if Input.is_action_just_pressed("ui_right"):
-		self.visible = true
+		self.visible = false
 	if Input.is_action_just_pressed("ui_select"):
-		self.visible = true
+		self.visible = false
 	if Input.is_action_just_pressed("ui_down"):
-		self.visible = true
+		self.visible = false
 	if Input.is_action_just_pressed("ui_up"):
-		self.visible = true
-
-
-
-
-func _on_Area2D_body_entered(body):
-	if body.get("TYPE")== "player":
-		get_tree().reload_current_scene()
+		self.visible = false
 	
-	
-

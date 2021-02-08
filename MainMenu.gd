@@ -26,7 +26,7 @@ func _process(delta):
 
 func handle_selection(_currnet_selection):
 	if current_selection == 0:
-		get_parent().add_child(tutorial.instance())
+		get_tree().change_scene("res://tutorial.tscn")
 		queue_free()
 	elif current_selection == 3:
 		get_tree().quit()
@@ -36,6 +36,7 @@ func handle_selection(_currnet_selection):
 	elif current_selection == 2:
 		get_tree().change_scene("res://Node2D.tscn")
 		queue_free()
+
 
 
 
