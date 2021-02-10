@@ -1,6 +1,6 @@
 extends MarginContainer
 
-const tutorial = preload("res://scenes/levels/tutorial.tscn")
+const tutorial = preload("res://scenes/levels/level0.tscn")
 const levelselect = preload("res://scenes/main menu/levelselect.tscn")
 const playground = preload("res://scenes/levels/Node2D.tscn")
 

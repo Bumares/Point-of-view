@@ -8,13 +8,6 @@
 [ext_resource path="res://sprites/icon.png" type="Texture" id=8]
 [ext_resource path="res://scripts/StaticBody2D.gd" type="Script" id=9]
 
-
-
-
-
-
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 63.9027, 17.5205, 0.334152, 17.1329, 0.334137, 0.884186, 63.5151, 1.24078 )
 
@@ -93,11 +86,24 @@ var locktarget = false
 func _physics_process(delta):
 	
 	#VIEW SYSTEM
+	
 	if Input.is_action_just_pressed(\"E\")&& self.visible == true:
 		self.visible = false
 	else:
 		if Input.is_action_just_pressed(\"E\")&& self.visible == false:
 			self.visible = true
+			
+
+	if Input.is_action_just_pressed(\"ui_left\"):
+		self.visible = true
+	if Input.is_action_just_pressed(\"ui_right\"):
+		self.visible = true
+	if Input.is_action_just_pressed(\"ui_select\"):
+		self.visible = true
+	if Input.is_action_just_pressed(\"ui_down\"):
+		self.visible = true
+	if Input.is_action_just_pressed(\"ui_up\"):
+		self.visible = true
 	
 	
 	#TARGETING SYSTEM
@@ -173,8 +179,8 @@ tile_data = PoolIntArray( -327692, 536870912, 0, -327691, 536870912, 0, -327690,
 [node name="depression" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 304.758, 278.617 )
 script = SubResource( 5 )
-speed_x = 150
-speed_y = 150
+speed_x = 100
+speed_y = 100
 
 [node name="Timer" type="Timer" parent="Node2D"]
 one_shot = true
