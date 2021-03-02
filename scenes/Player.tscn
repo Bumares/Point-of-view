@@ -10,7 +10,6 @@
 [ext_resource path="res://sprites/player/run3.png" type="Texture" id=8]
 [ext_resource path="res://scripts/player_script.gd" type="Script" id=9]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 16.788
 height = 54.2348

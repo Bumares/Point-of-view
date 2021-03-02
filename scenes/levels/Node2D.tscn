@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,12 @@
 [ext_resource path="res://scenes/lever.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sprites/industrial.v1.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=7]
+[ext_resource path="res://platform.tscn" type="PackedScene" id=8]
+[ext_resource path="res://platform.gd" type="Script" id=9]
+[ext_resource path="res://sprites/key-pixel-art-1bit-icon-260nw-1343706884.png" type="Texture" id=10]
+[ext_resource path="res://sprites/dvěře godot.png" type="Texture" id=11]
+[ext_resource path="res://scenes/levels/Key.gd" type="Script" id=12]
+[ext_resource path="res://scenes/levels/Door.gd" type="Script" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 19, 0, 19, 0, 0, 64, 0 )
@@ -67,10 +73,37 @@ points = PoolVector2Array( 17, 15.6755, 0, 15.6755, 0, 0, 17, 0 )
 a = Vector2( 1249.64, -13.1341 )
 b = Vector2( -1300.86, -29.5651 )
 
+[sub_resource type="Animation" id=6]
+resource_name = "movingplatform"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 799.98, 146.775 ), Vector2( 599.673, 146.181 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 54.3318, 63.9384 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 28.2529, 43.182 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 43.7539, 65.0336 )
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( 298.01, 141.201 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 727.583, -299.822 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -854.733, -625.76 )
@@ -81,9 +114,11 @@ current = true
 position = Vector2( -1, 4 )
 tile_set = SubResource( 4 )
 format = 1
-tile_data = PoolIntArray( -458740, 0, 0, -393205, 0, 0, -196612, 0, 0, -196611, 0, 0, -262133, 0, 0, -131073, 0, 0, -196608, 0, 0, -196599, 0, 0, -65548, 0, 0, -65547, 0, 0, -131070, 0, 0, -131069, 0, 0, -131065, 0, 0, -131064, 0, 0, -10, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131076, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0 )
+tile_data = PoolIntArray( -458740, 0, 0, -393205, 0, 0, -196612, 0, 0, -196611, 0, 0, -262133, 0, 0, -131073, 0, 0, -196608, 0, 0, -196599, 0, 0, -65548, 0, 0, -65547, 0, 0, -131070, 0, 0, -131069, 0, 0, -131065, 0, 0, -131064, 0, 0, -10, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0 )
 
 [node name="depression" parent="." instance=ExtResource( 4 )]
+speed_x = 1
+speed_y = 1
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -104,4 +139,49 @@ position = Vector2( 342.331, -124.16 )
 
 [node name="lever" parent="." instance=ExtResource( 5 )]
 position = Vector2( 210.49, 107.029 )
+
+[node name="platform" parent="." instance=ExtResource( 8 )]
+position = Vector2( 799.98, 146.775 )
+script = ExtResource( 9 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="platform"]
+autoplay = "movingplatform"
+anims/movingplatform = SubResource( 6 )
+
+[node name="Door" type="StaticBody2D" parent="."]
+position = Vector2( -117.385, 136.721 )
+script = ExtResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="Door"]
+position = Vector2( 2.9502, -5.54767 )
+scale = Vector2( 0.22652, 0.22962 )
+texture = ExtResource( 11 )
+
+[node name="Area2D" type="Area2D" parent="Door"]
+position = Vector2( 0, -1.18924 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
+position = Vector2( 16.7326, -8.97372 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2( -2.37842, 5.94601 )
+shape = SubResource( 10 )
+
+[node name="Key" type="Sprite" parent="."]
+position = Vector2( 592.629, -221.28 )
+scale = Vector2( 0.379731, 0.460034 )
+texture = ExtResource( 10 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Key"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key/Area2D"]
+position = Vector2( 0, -16.4325 )
+shape = SubResource( 8 )
 [connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Door/Area2D" to="Door" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Key/Area2D" to="Key" method="_on_Area2D_body_entered"]
