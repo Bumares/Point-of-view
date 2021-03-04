@@ -161,7 +161,7 @@ format = 1
 tile_data = PoolIntArray( 131076, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 327672, 0, 0, 327673, 0, 0, 393207, 0, 0, 458740, 0, 0, 458741, 0, 0, 458742, 0, 0 )
 
 [node name="depression" parent="." instance=ExtResource( 4 )]
-position = Vector2( -717.624, 109.103 )
+
 script = SubResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
