@@ -10,9 +10,10 @@
 [ext_resource path="res://platform.tscn" type="PackedScene" id=8]
 [ext_resource path="res://platform.gd" type="Script" id=9]
 [ext_resource path="res://sprites/key-pixel-art-1bit-icon-260nw-1343706884.png" type="Texture" id=10]
-[ext_resource path="res://sprites/dvěře godot.png" type="Texture" id=11]
+[ext_resource path="res://sprites/door.png" type="Texture" id=11]
 [ext_resource path="res://scenes/levels/Key.gd" type="Script" id=12]
 [ext_resource path="res://scenes/levels/Door.gd" type="Script" id=13]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 19, 0, 19, 0, 0, 64, 0 )
