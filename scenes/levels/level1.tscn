@@ -1456,19 +1456,16 @@ one_shot = true
 position = Vector2( 65.799, 300 )
 
 [node name="Spike2" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 323.603, 300 )
+position = Vector2( 197.799, 300 )
 
 [node name="Spike3" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 714.789, 300 )
+position = Vector2( 329.799, 300 )
 
 [node name="Spike4" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 196.987, 300 )
+position = Vector2( 461.799, 300 )
 
 [node name="Spike5" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 454.743, 300 )
-
-[node name="Spike6" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 584.3, 300 )
+position = Vector2( 593.799, 300 )
 
 [node name="bordery" type="Area2D" parent="Node2D"]
 position = Vector2( 91.4547, 494.477 )
@@ -1514,3 +1511,7 @@ position = Vector2( -11.3045, 102.413 )
 position = Vector2( 992.003, 193.156 )
 [connection signal="body_entered" from="Node2D/bordery" to="Node2D/bordery" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Node2D/door" to="Node2D/door" method="_on_door_body_entered"]
+[connection signal="glasses_up" from="Player" to="Node2D/Spike" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="Node2D/TileMap2/TileMap" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="Node2D/TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
