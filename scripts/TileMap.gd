@@ -1,9 +1,13 @@
-extends KinematicBody2D
+extends TileMap
+
+
 
 func _physics_process(delta):
+	
+	
 
-	if Input.is_action_just_pressed("E")&& self.visible == false:
-		self.visible = true
+	if Input.is_action_just_pressed("E") and self.visible == false:
+			self.visible = true
 	if Input.is_action_just_pressed("ui_left"):
 		self.visible = true
 	if Input.is_action_just_pressed("ui_right"):
@@ -14,16 +18,6 @@ func _physics_process(delta):
 		self.visible = true
 	if Input.is_action_just_pressed("ui_up"):
 		self.visible = true
-
-
-
-
-func _on_Area2D_body_entered(body):
-	if body.get("TYPE")== "player":
-		get_tree().reload_current_scene()
-	
-	
-
 
 
 func _on_Player_glasses_up(test):

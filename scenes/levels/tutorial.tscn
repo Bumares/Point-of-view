@@ -6,6 +6,9 @@
 [ext_resource path="res://sprites/industrial.v1.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=5]
 
+
+
+
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 63.8252, 18.8384, 0, 18.8384, 0, 0.000427246, 63.8252, 0.000427246 )
 
