@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 
-var state_machine 
 func _ready():
 	self.visible = false
 	

@@ -1,7 +1,7 @@
 extends Node2D
 
-var state_machine
 export var state = "0"
+signal lever_on(leveron)
 
 func _ready():
 	self.visible = false
@@ -10,8 +10,9 @@ func _ready():
 	else:
 		$Sprite.flip_h = bool (true)
 		
-func _process(delta):
+func _process(_delta):
 	if $Area2D.overlaps_body($"../Player") and Input.is_action_just_pressed("lever"):
+		emit_signal("lever_on", true)
 		if state == "0":
 			state = "1"
 		else:
@@ -24,7 +25,7 @@ func _process(delta):
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("E")&& self.visible == true:
 		self.visible = false
 	else:

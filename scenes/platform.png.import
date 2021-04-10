@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dvￄﾛￅﾙe godot.png-a87f943803757c91ee9e4535318baf50.stex"
+path="res://.import/platform.png-d32cd209c160e82fcba7046fbd92c249.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dvￄﾛￅﾙe godot.png"
-dest_files=[ "res://.import/dvￄﾛￅﾙe godot.png-a87f943803757c91ee9e4535318baf50.stex" ]
+source_file="res://scenes/platform.png"
+dest_files=[ "res://.import/platform.png-d32cd209c160e82fcba7046fbd92c249.stex" ]
 
 [params]
 

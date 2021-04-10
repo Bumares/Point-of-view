@@ -1534,3 +1534,7 @@ speed_x = 200
 speed_y = 200
 [connection signal="body_entered" from="Node2D/bordery" to="Node2D/bordery" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Node2D/door" to="Node2D/door" method="_on_door_body_entered"]
+[connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="Node2D/TileMap2/TileMap" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="Node2D/TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="Node2D/Spike" method="_on_Player_glasses_up"]
