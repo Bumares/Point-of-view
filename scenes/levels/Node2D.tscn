@@ -10,7 +10,7 @@
 [ext_resource path="res://platform.tscn" type="PackedScene" id=8]
 [ext_resource path="res://platform.gd" type="Script" id=9]
 [ext_resource path="res://sprites/key-pixel-art-1bit-icon-260nw-1343706884.png" type="Texture" id=10]
-[ext_resource path="res://sprites/door.png" type="Texture" id=11]
+[ext_resource path="res://sprites/dvěře godot.png" type="Texture" id=11]
 [ext_resource path="res://scenes/levels/Key.gd" type="Script" id=12]
 [ext_resource path="res://scenes/levels/Door.gd" type="Script" id=13]
 [ext_resource path="res://fallingplatform.tscn" type="PackedScene" id=14]
@@ -142,7 +142,7 @@ position = Vector2( 342.331, -124.16 )
 position = Vector2( 210.49, 107.029 )
 
 [node name="platform" parent="." instance=ExtResource( 8 )]
-position = Vector2( 779.949, 146.716 )
+position = Vector2( 799.98, 146.775 )
 script = ExtResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platform"]

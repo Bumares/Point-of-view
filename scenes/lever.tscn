@@ -4,10 +4,13 @@
 [ext_resource path="res://scripts/lever.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.313, 10.9963 )
+extents = Vector2( 24.4873, 10.7441 )
 
 [node name="lever" type="Node2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -465.703 ]
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -5.65683, 52.3259 )

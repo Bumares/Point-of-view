@@ -1,25 +1,29 @@
 extends TileMap
 
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+# Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
-	
 	if Input.is_action_just_pressed("E")&& self.visible == true:
 		self.visible = false
 	else:
-		if Input.is_action_just_pressed("ui_left"):
-			self.visible = false
-		if Input.is_action_just_pressed("ui_right"):
-			self.visible = false
-		if Input.is_action_just_pressed("ui_select"):
-			self.visible = false
-		if Input.is_action_just_pressed("ui_down"):
-			self.visible = false
-		if Input.is_action_just_pressed("ui_up"):
-			self.visible = false
+		if Input.is_action_just_pressed("E")&& self.visible == false:
+			self.visible = true
+	if Input.is_action_just_pressed("ui_left"):
+		self.visible = false
+		
+	if Input.is_action_just_pressed("ui_right"):
+		self.visible = false
+	if Input.is_action_just_pressed("ui_select"):
+		self.visible = false
+	if Input.is_action_just_pressed("ui_down"):
+		self.visible = false
+	if Input.is_action_just_pressed("ui_up"):
+		self.visible = false
 
 
-
-
-
-func _on_Player_glasses_up(test):
-	self.visible = true
-	return
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
