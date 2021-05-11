@@ -1459,10 +1459,6 @@ func on_timeout_complete():
 func _on_Area2D_body_entered(body):
 	if body.get(\"TYPE\")== \"player\":
 		 get_tree().reload_current_scene()
-
-
-func _on_Player_glasses_up(test):
-	pass # Replace with function body.
 "
 
 [node name="Node2D" type="Node2D"]
@@ -1579,7 +1575,3 @@ position = Vector2( -794.836, 461.788 )
 script = SubResource( 51 )
 [connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="door" to="door" method="_on_door_body_entered"]
-[connection signal="glasses_up" from="Player" to="Spike" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="TileMap2/TileMap" method="_on_Player_glasses_up"]
