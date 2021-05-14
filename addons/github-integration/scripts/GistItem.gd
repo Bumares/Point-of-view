@@ -1,6 +1,6 @@
 tool
-class_name GistItem
 extends PanelContainer
+class_name GistItem
 
 signal gist_selected(gist)
 signal gist_clicked(this_gist)

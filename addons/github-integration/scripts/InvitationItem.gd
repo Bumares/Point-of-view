@@ -1,6 +1,6 @@
 tool
-class_name InvitationItem
 extends HBoxContainer
+class_name InvitationItem
 
 onready var user_lbl : LinkButton = $User
 onready var repository_lbl : LinkButton = $Repository

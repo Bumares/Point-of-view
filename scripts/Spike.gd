@@ -1,11 +1,9 @@
 extends KinematicBody2D
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("E")&& self.visible == true:
-		self.visible = false
-	else:
-		if Input.is_action_just_pressed("E")&& self.visible == false:
-			self.visible = true
+
+	if Input.is_action_just_pressed("E")&& self.visible == false:
+		self.visible = true
 	if Input.is_action_just_pressed("ui_left"):
 		self.visible = true
 	if Input.is_action_just_pressed("ui_right"):
@@ -26,3 +24,8 @@ func _on_Area2D_body_entered(body):
 	
 	
 
+
+
+func _on_Player_glasses_up(test):
+	self.visible = false
+	return
