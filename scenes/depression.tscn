@@ -21,16 +21,17 @@ var wait = false
 export (int) var delay = 2
 var locktarget = false
 
+onready var change = $\"../Player\"
+
+func _on_Player_glasses_up(test):
+	self.visible = false
+
 
 func _physics_process(delta):
 	
 	#VIEW SYSTEM
-	if Input.is_action_just_pressed(\"E\")&& self.visible == true:
-		self.visible = false
-	else:
-		if Input.is_action_just_pressed(\"E\")&& self.visible == false:
-			self.visible = true
-			
+	if Input.is_action_just_pressed(\"E\")&& self.visible == false:
+		self.visible = true
 	if Input.is_action_just_pressed(\"ui_left\"):
 		self.visible = true
 	if Input.is_action_just_pressed(\"ui_right\"):
@@ -84,20 +85,24 @@ func on_timeout_complete():
 func _on_Area2D_body_entered(body):
 	if body.get(\"TYPE\")== \"player\":
 		 get_tree().reload_current_scene()
+
+
 "
 
 [sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.5978, 10 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 45.3964
+radius = 48.1096
 
 [node name="depression" type="KinematicBody2D"]
 position = Vector2( -177.298, 9.51364 )
+scale = Vector2( 1.6, 1.6 )
 script = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 3.47314, 0.223419 )
-scale = Vector2( 0.306509, 0.306509 )
+position = Vector2( 4.17474, 1.62648 )
+scale = Vector2( 0.325, 0.325 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -109,6 +114,6 @@ disabled = true
 position = Vector2( -3.56757, -3.56766 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3.56763, 1.18921 )
+position = Vector2( 3.21686, 3.81998 )
 shape = SubResource( 3 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
