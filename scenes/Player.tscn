@@ -32,14 +32,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": false,
-"name": "glasses_up",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 13 ) ],
 "loop": false,
 "name": "glasses_down",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "glasses_up",
 "speed": 15.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 6 ) ],
@@ -53,24 +53,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="GDScript" id=3]
-script/source = "extends AnimatedSprite
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	print(self.get_path())
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 1.10616, 41.9557, 9.4457, 41.9675, 9.43387, 36.9579, 7.7837, 36.9638, 7.77833, 11.9222, 9.44516, 11.9191, 9.44829, 10.2522, 11.1151, 10.2491, 11.1151, -8.09854, 9.44829, -8.09854, 9.44516, -9.77163, 7.77206, -9.7685, 7.77833, -11.4353, 6.10523, -11.4416, 6.10523, -13.1147, 7.78146, -13.1084, 7.77519, -14.7878, 9.44829, -14.7784, 9.44516, -18.1089, 11.1151, -18.1089, 11.1133, -29.7917, 9.44411, -29.7954, 9.45233, -34.7954, 7.78313, -34.801, 7.78313, -36.4646, 6.10835, -36.4702, 6.10277, -38.1394, -5.5649, -38.1338, -5.5649, -36.4702, -7.239, -36.4716, -7.23505, -34.7978, -8.91274, -34.8018, -8.9009, -33.1281, -10.5707, -33.1241, -10.5746, -31.4662, -12.2393, -31.4592, -12.2424, -29.7986, -13.9186, -29.7892, -13.9186, -24.7888, -12.2487, -24.7856, -12.2424, -19.7851, -10.5787, -19.7789, -10.5756, -16.4483, -8.91502, -16.4515, -8.90249, -14.7753, -7.23879, -14.7815, -7.23879, -11.4291, -8.90562, -11.4353, -8.90562, -9.77163, -10.5662, -9.77163, -10.5818, -8.10481, -12.2455, -8.10481, -12.2487, -6.44111, -13.9124, -6.43798, -13.9068, 13.5985, -12.2312, 13.5985, -12.2312, 15.2425, -8.901, 15.2425, -8.90569, 41.9488, -0.562367, 41.9598, -0.554004, 36.9578, -2.2269, 36.9578, -2.23401, 26.9383, 1.09826, 26.9383 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 2.58868, 11.754 )
@@ -86,4 +70,10 @@ position = Vector2( 5.46582, 4.62491 )
 scale = Vector2( 1.80906, 1.80906 )
 frames = SubResource( 2 )
 animation = "idle"
-script = SubResource( 3 )
+playing = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="AnimatedSprite"]
+show_behind_parent = true
+position = Vector2( -2.66077, -1.144 )
+scale = Vector2( 0.59928, 0.59928 )
+occluder = SubResource( 3 )
