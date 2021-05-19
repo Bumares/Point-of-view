@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/spikes.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Spike.gd" type="Script" id=2]
+
+[sub_resource type="VisualShader" id=1]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Output:0
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( 0, 236 )
+nodes/fragment/0/position = Vector2( 520, 140 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( -15.9897, 4.4779, -16.0077, 2.48962, -14.9956, 2.48962, -15.0046, 1.49549, -14.0104, 1.50445, -14.0015, 0.501355, -12.9984, 0.510311, -12.9894, -0.501737, -12.0222, -0.510693, -12.0031, -1.50724, -11.0043, -1.50013, -11.0115, -2.49532, -9.99494, -2.49177, -10.002, -3.50118, -8.99974, -3.49762, -8.99974, -4.49637, -6.99869, -4.50348, -6.9987, -3.49763, -5.99995, -3.49763, -5.9964, -2.50244, -5.00121, -2.49888, -4.99766, -1.50014, -4.00247, -1.50369, -3.99271, -0.503349, -3.00224, -0.499767, -2.99328, 0.501469, -1.99802, 0.507447, -1.99503, 1.49972, -0.999775, 1.50569, -0.999775, 2.50095, 0.999708, 2.50394, 1.0027, 1.49972, 2.00692, 1.50569, 2.00692, 0.495492, 2.99321, 0.501469, 2.99348, -0.492994, 4.00058, -0.495815, 3.99494, -1.50292, 5.00204, -1.5001, 4.99922, -2.49874, 6.00632, -2.49592, 6.0035, -3.5002, 6.99932, -3.49456, 6.99932, -4.50166, 8.99942, -4.49602, 8.9966, -3.49456, 10.0009, -3.49738, 10.0009, -2.49592, 11.0023, -2.49592, 11.0052, -1.5001, 12.0038, -1.49728, 11.9953, -0.501457, 12.9912, -0.492994, 13.0053, 0.502825, 13.9983, 0.505646, 14.0039, 1.49582, 15.0054, 1.49864, 14.9997, 2.49728, 15.9984, 2.5001, 15.9984, 4.49456 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2.37268, 3.03555 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 62.8546, 17.7315 )
+
+[node name="Spike" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
+scale = Vector2( 3.91651, 3.91651 )
+texture = ExtResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
+show_behind_parent = true
+occluder = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.93093, 0.202278 )
+scale = Vector2( -1.10464, 1.02577 )
+shape = SubResource( 3 )
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+rotation = -0.064822
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0.0250924, 0.0197318 )
+rotation = 0.0607686
+shape = SubResource( 4 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

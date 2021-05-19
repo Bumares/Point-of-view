@@ -1,0 +1,177 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://HelvetiPixel.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 256
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.556863, 0.145098, 0.145098, 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 1731.0
+margin_top = 989.443
+margin_right = 3651.0
+margin_bottom = 1212.44
+rect_scale = Vector2( 0.64, 0.64 )
+custom_fonts/font = SubResource( 1 )
+text = "v 0.1
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 384.0
+margin_top = 194.0
+margin_right = 1536.0
+margin_bottom = 885.0
+custom_constants/separation = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 1152.0
+margin_bottom = 219.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_right = 1152.0
+margin_bottom = 219.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Point of View"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 239.0
+margin_right = 1152.0
+margin_bottom = 691.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+margin_left = 386.0
+margin_right = 766.0
+margin_bottom = 452.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 380.0
+margin_bottom = 110.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
+margin_right = 380.0
+margin_bottom = 110.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 56.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 56, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = ">"
+
+[node name="playbutton" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_left = 60.0
+margin_right = 380.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 320, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Start"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 114.0
+margin_right = 380.0
+margin_bottom = 224.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2"]
+margin_right = 380.0
+margin_bottom = 110.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_right = 56.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 56, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = ">"
+
+[node name="playbutton" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_left = 60.0
+margin_right = 380.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 320, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Levels"
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 228.0
+margin_right = 380.0
+margin_bottom = 338.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
+margin_right = 380.0
+margin_bottom = 110.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_right = 56.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 56, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = ">"
+
+[node name="playbutton" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_left = 60.0
+margin_right = 380.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 320, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Options"
+
+[node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 342.0
+margin_right = 380.0
+margin_bottom = 452.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4"]
+margin_right = 380.0
+margin_bottom = 110.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer"]
+margin_right = 56.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 56, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = ">"
+
+[node name="playbutton" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer"]
+margin_left = 60.0
+margin_right = 380.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 320, 0 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Exit"

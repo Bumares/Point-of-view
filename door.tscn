@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area2D
+
+
+
+func _on_door_body_entered(body):
+	if body.get(\"TYPE\")== \"player\":
+		get_tree().change_scene(\"res://scenes/levels/level1.tscn\")
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 25.1045, 38.5337 )
+
+[node name="door" type="Area2D"]
+script = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -4.57764e-05, -2.97305 )
+scale = Vector2( 0.19171, 0.180097 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.05176e-05, 2.37854 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_door_body_entered"]
