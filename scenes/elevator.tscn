@@ -1,0 +1,268 @@
+[gd_scene load_steps=79 format=2]
+
+[ext_resource path="res://sprites/elevator/elevator background.png" type="Texture" id=1]
+[ext_resource path="res://sprites/pngwing.com.png" type="Texture" id=2]
+[ext_resource path="res://sprites/elevator/elevator17.png" type="Texture" id=3]
+[ext_resource path="res://sprites/elevator/elevator16.png" type="Texture" id=4]
+[ext_resource path="res://sprites/elevator/elevator61.png" type="Texture" id=5]
+[ext_resource path="res://sprites/elevator/elevator54.png" type="Texture" id=6]
+[ext_resource path="res://sprites/elevator/elevator15.png" type="Texture" id=7]
+[ext_resource path="res://sprites/elevator/elevator20.png" type="Texture" id=8]
+[ext_resource path="res://sprites/elevator/elevator18.png" type="Texture" id=9]
+[ext_resource path="res://sprites/elevator/elevator19.png" type="Texture" id=10]
+[ext_resource path="res://sprites/elevator/elevator59.png" type="Texture" id=11]
+[ext_resource path="res://sprites/elevator/elevator60.png" type="Texture" id=12]
+[ext_resource path="res://sprites/elevator/elevator58.png" type="Texture" id=13]
+[ext_resource path="res://sprites/elevator/elevator56.png" type="Texture" id=14]
+[ext_resource path="res://sprites/elevator/elevator57.png" type="Texture" id=15]
+[ext_resource path="res://sprites/elevator/elevator55.png" type="Texture" id=16]
+[ext_resource path="res://scripts/elevator.gd" type="Script" id=56]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/elevator21.png-b680a28cee8f148b78ed223752d15c7c.stex"
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/elevator20.png-a8bcdc054e300327daa1c9f9748990a1.stex"
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/elevator19.png-6a9cd1f57a1ebdca6f19865bb55495fc.stex"
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/elevator18.png-6d8edb18d0774ef03926a7d15dcc6f3e.stex"
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/elevator17.png-42efac58e31d84cbf20cfed76d560841.stex"
+
+[sub_resource type="StreamTexture" id=6]
+load_path = "res://.import/elevator16.png-ad6e6b1df1a65f7ce0fe0a161f393f30.stex"
+
+[sub_resource type="StreamTexture" id=7]
+load_path = "res://.import/elevator15.png-a370ca3286338a560b812be8859334b3.stex"
+
+[sub_resource type="StreamTexture" id=8]
+load_path = "res://.import/elevator54.png-9a90bba2fdfab0fbb19a999b69f80be3.stex"
+
+[sub_resource type="StreamTexture" id=9]
+load_path = "res://.import/elevator53.png-08723dc3582c83ee163a03a8b2cee1aa.stex"
+
+[sub_resource type="StreamTexture" id=10]
+load_path = "res://.import/elevator52.png-60c2589af9f2364a0b1e49766989c602.stex"
+
+[sub_resource type="StreamTexture" id=11]
+load_path = "res://.import/elevator51.png-9426d356b85710c7db424575fb0dddba.stex"
+
+[sub_resource type="StreamTexture" id=12]
+load_path = "res://.import/elevator50.png-81d26abdc899a240a019495117fb898b.stex"
+
+[sub_resource type="StreamTexture" id=13]
+load_path = "res://.import/elevator49.png-be9984abcd2eec65f6958f61124424d3.stex"
+
+[sub_resource type="StreamTexture" id=14]
+load_path = "res://.import/elevator48.png-16a9ebe71ae95cf4c298270c5683dfb1.stex"
+
+[sub_resource type="StreamTexture" id=15]
+load_path = "res://.import/elevator47.png-1bc5f20fecbe3bedc92279a854576a75.stex"
+
+[sub_resource type="StreamTexture" id=16]
+load_path = "res://.import/elevator46.png-b791b441abefda46e4a0cc4961b2b586.stex"
+
+[sub_resource type="StreamTexture" id=17]
+load_path = "res://.import/elevator45.png-f4927afaff3bfa0a51ddebb2f90ada9f.stex"
+
+[sub_resource type="StreamTexture" id=18]
+load_path = "res://.import/elevator44.png-2c36bbbc991eb2619169e308997d002b.stex"
+
+[sub_resource type="StreamTexture" id=19]
+load_path = "res://.import/elevator43.png-89fecba6a321d4e80b45df9a88c92d24.stex"
+
+[sub_resource type="StreamTexture" id=20]
+load_path = "res://.import/elevator42.png-0355935744989a77a550b186149845c8.stex"
+
+[sub_resource type="StreamTexture" id=21]
+load_path = "res://.import/elevator41.png-5856601b368302944149a8a96d6f69e2.stex"
+
+[sub_resource type="StreamTexture" id=22]
+load_path = "res://.import/elevator40.png-733f2fd710871310eec9d18ecdd8eff0.stex"
+
+[sub_resource type="StreamTexture" id=23]
+load_path = "res://.import/elevator39.png-87c60f9e89e5d84504054c55f30823c3.stex"
+
+[sub_resource type="StreamTexture" id=24]
+load_path = "res://.import/elevator38.png-689cf399929d801c650bd61145bbedb4.stex"
+
+[sub_resource type="StreamTexture" id=25]
+load_path = "res://.import/elevator37.png-8b3dbe2edd83d157130c67d23fcf22e5.stex"
+
+[sub_resource type="StreamTexture" id=26]
+load_path = "res://.import/elevator36.png-969c01fd3e24db4d90cfe0bf989be890.stex"
+
+[sub_resource type="StreamTexture" id=27]
+load_path = "res://.import/elevator35.png-2a3d634c65e8345d17b1fc048249892e.stex"
+
+[sub_resource type="StreamTexture" id=28]
+load_path = "res://.import/elevator34.png-35ad9ec6c0fb3c4cbcb4102a30f5d7ba.stex"
+
+[sub_resource type="StreamTexture" id=29]
+load_path = "res://.import/elevator33.png-35089bb027def617ccff6ecb429c6882.stex"
+
+[sub_resource type="StreamTexture" id=30]
+load_path = "res://.import/elevator31.png-2cf8099d10a18f43a62870fb15f4a2f2.stex"
+
+[sub_resource type="StreamTexture" id=31]
+load_path = "res://.import/elevator32.png-027ebec72118262c5f02f8105c877552.stex"
+
+[sub_resource type="StreamTexture" id=32]
+load_path = "res://.import/elevator30.png-348649ca0f859871ddeef9b4f8fd0d99.stex"
+
+[sub_resource type="StreamTexture" id=33]
+load_path = "res://.import/elevator29.png-45300cc05cbc166475d333e96643246d.stex"
+
+[sub_resource type="StreamTexture" id=34]
+load_path = "res://.import/elevator28.png-3478fa0b5820939a784cb6a90249f199.stex"
+
+[sub_resource type="StreamTexture" id=35]
+load_path = "res://.import/elevator27.png-b4deaae2d600033351a6e876b094bd09.stex"
+
+[sub_resource type="StreamTexture" id=36]
+load_path = "res://.import/elevator26.png-aaab027c11274071aefee411847bb16e.stex"
+
+[sub_resource type="StreamTexture" id=37]
+load_path = "res://.import/elevator25.png-443969bbda6101276567d2101fd6f99e.stex"
+
+[sub_resource type="StreamTexture" id=38]
+load_path = "res://.import/elevator24.png-9da6f251530a208aec77716d29d6af7d.stex"
+
+[sub_resource type="StreamTexture" id=39]
+load_path = "res://.import/elevator23.png-9fc4801534e17db54194e72ac45abb1d.stex"
+
+[sub_resource type="StreamTexture" id=40]
+load_path = "res://.import/elevator22.png-bdaf8f3a9f62c05ae03d5e8cb8251d9a.stex"
+
+[sub_resource type="StreamTexture" id=41]
+load_path = "res://.import/elevator1.png-46b070bf63bbf6cf3ef1fa47c057493c.stex"
+
+[sub_resource type="StreamTexture" id=42]
+load_path = "res://.import/elevator2.png-2ec26f5a22a4c3341d57fe63f7ab829f.stex"
+
+[sub_resource type="StreamTexture" id=43]
+load_path = "res://.import/elevator3.png-3e0a963a9a97f6878bc1ae9a468abd9f.stex"
+
+[sub_resource type="StreamTexture" id=44]
+load_path = "res://.import/elevator4.png-cf1ed5be2813ddb0ad95212c45c67689.stex"
+
+[sub_resource type="StreamTexture" id=45]
+load_path = "res://.import/elevator5.png-8e85dfa84d3cf92ebb40a8cc60489d47.stex"
+
+[sub_resource type="StreamTexture" id=46]
+load_path = "res://.import/elevator6.png-211aadf279007c773b024b787d279fcc.stex"
+
+[sub_resource type="StreamTexture" id=47]
+load_path = "res://.import/elevator7.png-87dee2db2e00e64a1a352efd6e8d322b.stex"
+
+[sub_resource type="StreamTexture" id=48]
+load_path = "res://.import/elevator8.png-72b1535a2948f156dca72ec682749531.stex"
+
+[sub_resource type="StreamTexture" id=49]
+load_path = "res://.import/elevator9.png-f6f760e931e37afda928d028ca12d283.stex"
+
+[sub_resource type="StreamTexture" id=50]
+load_path = "res://.import/elevator10.png-0a4be4820fa95e2e9830014cdd9b5568.stex"
+
+[sub_resource type="StreamTexture" id=51]
+load_path = "res://.import/elevator11.png-a4e00aee5edceb11451b8f73e3423638.stex"
+
+[sub_resource type="StreamTexture" id=52]
+load_path = "res://.import/elevator12.png-e4355e6b2ea555661d9760831e396333.stex"
+
+[sub_resource type="StreamTexture" id=53]
+load_path = "res://.import/elevator13.png-25dd587ff7da6412528b37489305a829.stex"
+
+[sub_resource type="StreamTexture" id=54]
+load_path = "res://.import/elevator14.png-7c8fbf727ea820b4e23c3fc47e20ea11.stex"
+
+[sub_resource type="StreamTexture" id=55]
+load_path = "res://.import/elevator61.png-3a05d06a5a7b33eee0097d54d60b353f.stex"
+
+[sub_resource type="SpriteFrames" id=56]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 7 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 55 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "default",
+"speed": 9.0
+}, {
+"frames": [ SubResource( 55 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="OccluderPolygon2D" id=57]
+polygon = PoolVector2Array( -14.0277, -23.4556, 15.0762, -23.3874, 15.9623, 23.5059, 20.7334, 23.4378, 20.8697, -29.2491, -19.8894, -29.4536, -19.8894, 23.3015, -15.868, 23.2333 )
+
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 14.5376, 23.5751 )
+
+[sub_resource type="OccluderPolygon2D" id=59]
+polygon = PoolVector2Array( -1.51531, 2.51123, -1.50394, 1.49906, -2.49341, 1.49186, -2.49386, 0.497788, -3.49259, 0.4967, -3.48254, -2.49481, -2.51753, -2.51089, -2.50402, -5.50196, -4.49895, -5.50743, -4.50321, -6.4936, -5.50217, -6.49999, -5.48437, -5.51787, -6.48834, -5.50317, -6.49899, -6.50212, -7.48189, -6.4828, -7.4873, -5.5053, -6.50751, -5.50317, -6.4926, -2.50417, -5.49364, -2.50417, -5.49289, -1.50735, -6.50774, -1.50735, -6.47379, -0.513896, -4.49981, -0.498459, -4.49579, 0.502731, -3.4951, 0.490437, -3.4946, 2.49305 )
+
+[sub_resource type="OccluderPolygon2D" id=60]
+polygon = PoolVector2Array( 3.49966, -0.508512, 3.50167, -1.49965, 4.50085, -1.50166, 4.49884, -2.49682, 5.50003, -2.50285, 5.50003, -3.496, 7.49638, -3.49801, 7.5004, -2.50084, 8.49958, -2.50084, 8.49654, -6.50253, 7.49855, -6.5, 7.50287, -10.4989, 4.50048, -10.4989, 4.50617, -8.50303, 5.49843, -8.49735, 5.50128, -5.50349, 4.4948, -5.50634, 4.50048, -3.49906, 3.49969, -3.49622, 3.50537, -2.49542, 2.50174, -2.49826, 2.50458, -0.502362 )
+
+[sub_resource type="OccluderPolygon2D" id=61]
+polygon = PoolVector2Array( -24.9975, 26.8944, 16.0351, 27.0764, 15.9441, 3.92163, 17.3088, 3.96712, 18.9464, 3.96712, 19.0829, 5.87772, 24.9967, 6.15067, 24.9936, 4.06364, 26.8163, 4.0581, 26.9983, -7.04162, 25.1787, -6.99613, 24.9512, -8.99772, 18.9464, -8.99772, 19.0374, -7.08711, 17.0358, -6.95064, 16.9449, 3.83064, 15.9441, 3.78515, 15.9896, -26.0112, -25.0856, -25.8576 )
+
+[node name="elevator" type="Node2D"]
+scale = Vector2( 3.886, 3.886 )
+script = ExtResource( 56 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+z_index = 1
+z_as_relative = false
+frames = SubResource( 56 )
+animation = "idle"
+playing = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="AnimatedSprite"]
+position = Vector2( -4.91299, 3.54827 )
+occluder = SubResource( 57 )
+
+[node name="Light2D" type="Light2D" parent="AnimatedSprite"]
+visible = false
+show_behind_parent = true
+position = Vector2( -4.85457, -15.4056 )
+z_index = -2
+z_as_relative = false
+texture = ExtResource( 2 )
+energy = 0.5
+shadow_enabled = true
+shadow_gradient_length = 220.2
+shadow_filter = 5
+shadow_filter_smooth = 5.4
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite"]
+visible = false
+position = Vector2( -4.73102, 3.54827 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/Area2D"]
+shape = SubResource( 58 )
+
+[node name="Sprite" type="Sprite" parent="AnimatedSprite"]
+position = Vector2( -4.91299, 3.54827 )
+z_as_relative = false
+texture = ExtResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="AnimatedSprite/Sprite"]
+visible = false
+occluder = SubResource( 59 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="AnimatedSprite/Sprite"]
+visible = false
+occluder = SubResource( 60 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="AnimatedSprite/Sprite"]
+visible = false
+show_behind_parent = true
+position = Vector2( 4.91299, -3.4624 )
+z_index = 1
+occluder = SubResource( 61 )
+[connection signal="body_entered" from="AnimatedSprite/Area2D" to="." method="_on_Area2D_body_entered"]

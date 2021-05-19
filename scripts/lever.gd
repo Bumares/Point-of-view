@@ -3,15 +3,15 @@ extends Node2D
 export var state = "0"
 signal lever_on(leveron)
 
+
 func _ready():
-	self.visible = false
 	if state == "0":
 		$Sprite.flip_h = bool (false)
 	else:
 		$Sprite.flip_h = bool (true)
 		
 func _process(_delta):
-	if $Area2D.overlaps_body($"../Player") and Input.is_action_just_pressed("lever"):
+	if $Area2D.overlaps_body(get_parent().get_node("../Player")) and Input.is_action_just_pressed("lever"):
 		emit_signal("lever_on", true)
 		if state == "0":
 			state = "1"
@@ -22,23 +22,3 @@ func _process(_delta):
 	else:
 		$Sprite.flip_h = true
 		
-
-
-
-func _physics_process(_delta):
-	if Input.is_action_just_pressed("E")&& self.visible == true:
-		self.visible = false
-	else:
-		if Input.is_action_just_pressed("E")&& self.visible == false:
-			self.visible = true
-	if Input.is_action_just_pressed("ui_left"):
-		self.visible = false
-	if Input.is_action_just_pressed("ui_right"):
-		self.visible = false
-	if Input.is_action_just_pressed("ui_select"):
-		self.visible = false
-	if Input.is_action_just_pressed("ui_down"):
-		self.visible = false
-	if Input.is_action_just_pressed("ui_up"):
-		self.visible = false
-

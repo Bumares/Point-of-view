@@ -18,6 +18,9 @@ var glasses_down = false
 signal glasses_up(test)
 var func1 = true
 var func2 = true
+var movement = true
+var onfloor = false
+var inelevator = false
 
 
 const TYPE = "player"
@@ -36,34 +39,39 @@ func get_input():
 		glasses_down = true
 		func1 = true
 	
-	if jump and is_on_floor():
-		jumping = true
-		velocity.y = jump_speed
-	if right:
-		velocity.x += run_speed
-	elif left:
-		velocity.x -= run_speed
+	if movement == true:
+		if jump and is_on_floor():
+			jumping = true
+			velocity.y = jump_speed
+		if right:
+			velocity.x += run_speed
+		elif left:
+			velocity.x -= run_speed
+			
 		
+	
 
 
 #ANIMATION SELECTION
 func animation_play():
-	if is_on_floor() == true and velocity.x == 0 and glasses == false:
+	if (is_on_floor() == true and velocity.x == 0 and glasses == false) or inelevator == true:
 		animation_playing = "idle"
 		
-	if is_on_floor() == true and velocityx > 0 and glasses == false:
+	if (is_on_floor() == true or onfloor == true) and velocityx > 0 and glasses == false and inelevator == false:
 			animation_playing = "run"
 			$AnimatedSprite.flip_h = false
-		
-	if is_on_floor() == true and velocityx < 0 and glasses == false:
+			
+			
+			
+	if is_on_floor() == true and velocityx < 0 and glasses == false and inelevator == false:
 			animation_playing = "run"
 			$AnimatedSprite.flip_h = true
-		
-	if is_on_floor() == false and velocityx < 0 and glasses == false:
+			
+	if is_on_floor() == false and velocityx < 0 and glasses == false and onfloor == false:
 		animation_playing = "jump"
 		$AnimatedSprite.flip_h = true
 	
-	if is_on_floor() == false and velocityx >= 0 and glasses == false:
+	if is_on_floor() == false and velocityx >= 0 and glasses == false and onfloor == false:
 		animation_playing = "jump"
 		$AnimatedSprite.flip_h = false
 	
@@ -80,6 +88,7 @@ func animation_play():
 			func2 = false
 	
 	$AnimatedSprite.play(animation_playing)
+	
 
 
 #GLASSES RELATED FUNCTION
@@ -126,5 +135,8 @@ func _physics_process(delta):
 		
 		velocityx = velocity.x
 		 
-		
-		
+		for i in get_slide_count():
+				var collision = get_slide_collision(i)
+				if collision.collider.has_method("collide_with"):
+					collision.collider.collide_with(collision, self
+					   )

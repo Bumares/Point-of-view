@@ -37,7 +37,6 @@ rect_scale = Vector2( 0.64, 0.64 )
 custom_fonts/font = SubResource( 1 )
 text = "v 0.1
 "
-percent_visible = -0.25
 __meta__ = {
 "_edit_use_anchors_": false
 }
