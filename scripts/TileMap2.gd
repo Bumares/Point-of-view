@@ -26,6 +26,8 @@ func _physics_process(delta):
 
 
 
+
+
 func _on_Player_glasses_up(test):
 	self.visible = true
 	self.occluder_light_mask = true

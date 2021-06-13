@@ -26,7 +26,22 @@ func _process(delta):
 
 func handle_selection(_currnet_selection):
 	if current_selection == 5:
-		get_tree().change_scene("res://MainMenu.tscn")
+		get_tree().change_scene("res://scenes/main menu/MainMenu.tscn")
+		queue_free()
+	if current_selection == 0:
+		get_tree().change_scene("res://scenes/levels/level1.tscn")
+		queue_free()
+	if current_selection == 1:
+		get_tree().change_scene("res://scenes/levels/Level2.tscn")
+		queue_free()
+	if current_selection == 2:
+		get_tree().change_scene("res://scenes/levels/Level3.tscn")
+		queue_free()
+	#if current_selection == 3:
+	#	get_tree().change_scene("res://scenes/levels/Level4.tscn")
+	#	queue_free()
+	if current_selection == 4:
+		get_tree().change_scene("res://scenes/levels/tutorial.tscn")
 		queue_free()
 
 

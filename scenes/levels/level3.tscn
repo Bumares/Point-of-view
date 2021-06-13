@@ -1,26 +1,30 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=89 format=2]
 
-[ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/depression.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/movingplatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/tiles/tileset depression v02.png" type="Texture" id=2]
+[ext_resource path="res://sprites/tiles/tilesebig positivet.png" type="Texture" id=3]
 [ext_resource path="res://scenes/lever.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scripts/Area2D.gd" type="Script" id=5]
-[ext_resource path="res://scenes/elevator.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scripts/pause.gd" type="Script" id=7]
-[ext_resource path="res://scenes/movingplatform.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scripts/tutorialtext.gd" type="Script" id=9]
-[ext_resource path="res://scripts/TileMap2.gd" type="Script" id=11]
-[ext_resource path="res://scripts/TileMap.gd" type="Script" id=12]
-[ext_resource path="res://scripts/depressive set.gd" type="Script" id=13]
-[ext_resource path="res://sprites/tiles/tileset depression v02.png" type="Texture" id=14]
-[ext_resource path="res://sprites/tiles/tilesebig positivet.png" type="Texture" id=15]
-[ext_resource path="res://scripts/positive set.gd" type="Script" id=19]
-[ext_resource path="res://scripts/spikes.gd" type="Script" id=20]
-[ext_resource path="res://sprites/pngwing.com.png" type="Texture" id=22]
-[ext_resource path="res://sprites/output-onlinepngtools (6).png" type="Texture" id=23]
-[ext_resource path="res://sprites/bacground depressive1.png" type="Texture" id=24]
-[ext_resource path="res://sprites/609eefe0d1363.jpg" type="Texture" id=25]
-[ext_resource path="res://HelvetiPixel.ttf" type="DynamicFontData" id=26]
+[ext_resource path="res://scripts/TileMap.gd" type="Script" id=5]
+[ext_resource path="res://scripts/TileMap2.gd" type="Script" id=6]
+[ext_resource path="res://scripts/depressive set.gd" type="Script" id=7]
+[ext_resource path="res://HelvetiPixel.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://scripts/positive set.gd" type="Script" id=9]
+[ext_resource path="res://scripts/Area2D.gd" type="Script" id=10]
+[ext_resource path="res://scripts/pause.gd" type="Script" id=11]
+[ext_resource path="res://sprites/pngwing.com.png" type="Texture" id=12]
+[ext_resource path="res://sprites/bacground depressive1.png" type="Texture" id=13]
+[ext_resource path="res://sprites/output-onlinepngtools (6).png" type="Texture" id=14]
+[ext_resource path="res://sprites/609eefe0d1363.jpg" type="Texture" id=15]
+[ext_resource path="res://scenes/depression.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/elevator_enter.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/elevator.tscn" type="PackedScene" id=20]
+[ext_resource path="res://sprites/key-pixel-art-1bit-icon-260nw-1343706884.png" type="Texture" id=21]
+[ext_resource path="res://scripts/Key.gd" type="Script" id=22]
+[ext_resource path="res://scripts/spikes.gd" type="Script" id=25]
+[ext_resource path="res://sprites/platform.png" type="Texture" id=26]
+[ext_resource path="res://scripts/fallingplatform.gd" type="Script" id=27]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 2803.93, 1.79675 )
@@ -94,7 +98,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="TileSet" id=24]
 0/name = "tilesebig positivet.png 0"
-0/texture = ExtResource( 15 )
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
@@ -115,7 +119,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 0/z_index = 0
 1/name = "tilesebig positivet.png 1"
-1/texture = ExtResource( 15 )
+1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 64, 0, 64, 64 )
@@ -136,7 +140,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 1/z_index = 0
 2/name = "tilesebig positivet.png 2"
-2/texture = ExtResource( 15 )
+2/texture = ExtResource( 3 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 128, 0, 64, 64 )
@@ -157,7 +161,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 2/z_index = 0
 3/name = "tilesebig positivet.png 3"
-3/texture = ExtResource( 15 )
+3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 64, 64, 64 )
@@ -178,7 +182,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 3/z_index = 0
 4/name = "tilesebig positivet.png 4"
-4/texture = ExtResource( 15 )
+4/texture = ExtResource( 3 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 64, 64, 64, 64 )
@@ -199,7 +203,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 4/z_index = 0
 5/name = "tilesebig positivet.png 5"
-5/texture = ExtResource( 15 )
+5/texture = ExtResource( 3 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 128, 64, 64, 64 )
@@ -220,7 +224,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 5/z_index = 0
 6/name = "tilesebig positivet.png 6"
-6/texture = ExtResource( 15 )
+6/texture = ExtResource( 3 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 128, 64, 64 )
@@ -241,7 +245,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 6/z_index = 0
 7/name = "tilesebig positivet.png 7"
-7/texture = ExtResource( 15 )
+7/texture = ExtResource( 3 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 64, 128, 64, 64 )
@@ -262,7 +266,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 7/z_index = 0
 8/name = "tilesebig positivet.png 8"
-8/texture = ExtResource( 15 )
+8/texture = ExtResource( 3 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 128, 128, 64, 64 )
@@ -283,7 +287,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 8/z_index = 0
 9/name = "tilesebig positivet.png 9"
-9/texture = ExtResource( 15 )
+9/texture = ExtResource( 3 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 256, 0, 64, 64 )
@@ -304,7 +308,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 9/z_index = 0
 10/name = "tilesebig positivet.png 10"
-10/texture = ExtResource( 15 )
+10/texture = ExtResource( 3 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 256, 64, 64, 64 )
@@ -325,7 +329,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 10/z_index = 0
 11/name = "tilesebig positivet.png 11"
-11/texture = ExtResource( 15 )
+11/texture = ExtResource( 3 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 256, 128, 64, 64 )
@@ -346,7 +350,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 11/z_index = 0
 12/name = "tilesebig positivet.png 12"
-12/texture = ExtResource( 15 )
+12/texture = ExtResource( 3 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 256, 64, 64 )
@@ -367,7 +371,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 12/z_index = 0
 13/name = "tilesebig positivet.png 13"
-13/texture = ExtResource( 15 )
+13/texture = ExtResource( 3 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 64, 256, 64, 64 )
@@ -388,7 +392,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 13/z_index = 0
 14/name = "tilesebig positivet.png 14"
-14/texture = ExtResource( 15 )
+14/texture = ExtResource( 3 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 128, 256, 64, 64 )
@@ -409,7 +413,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 14/z_index = 0
 15/name = "tilesebig positivet.png 15"
-15/texture = ExtResource( 15 )
+15/texture = ExtResource( 3 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 256, 256, 64, 64 )
@@ -430,7 +434,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 15/z_index = 0
 16/name = "tilesebig positivet.png 16"
-16/texture = ExtResource( 15 )
+16/texture = ExtResource( 3 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 320, 320, 64, 64 )
@@ -451,7 +455,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 16/z_index = 0
 17/name = "tilesebig positivet.png 17"
-17/texture = ExtResource( 15 )
+17/texture = ExtResource( 3 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 384, 192, 64, 64 )
@@ -472,7 +476,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 17/z_index = 0
 18/name = "tilesebig positivet.png 18"
-18/texture = ExtResource( 15 )
+18/texture = ExtResource( 3 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 320, 192, 64, 64 )
@@ -493,7 +497,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 18/z_index = 0
 19/name = "tilesebig positivet.png 19"
-19/texture = ExtResource( 15 )
+19/texture = ExtResource( 3 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 384, 128, 64, 64 )
@@ -514,7 +518,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 19/z_index = 0
 20/name = "tilesebig positivet.png 20"
-20/texture = ExtResource( 15 )
+20/texture = ExtResource( 3 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 320, 256, 64, 64 )
@@ -535,7 +539,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 20/z_index = 0
 21/name = "tilesebig positivet.png 21"
-21/texture = ExtResource( 15 )
+21/texture = ExtResource( 3 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 384, 320, 64, 64 )
@@ -561,7 +565,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="TileSet" id=26]
 0/name = "tileset depression v02.png 0"
-0/texture = ExtResource( 14 )
+0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
@@ -575,7 +579,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "tileset depression v02.png 1"
-1/texture = ExtResource( 14 )
+1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 64, 0, 64, 64 )
@@ -590,7 +594,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "tileset depression v02.png 2"
-2/texture = ExtResource( 14 )
+2/texture = ExtResource( 2 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 256, 0, 64, 64 )
@@ -604,7 +608,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 2/shapes = [  ]
 2/z_index = 0
 3/name = "tileset depression v02.png 3"
-3/texture = ExtResource( 14 )
+3/texture = ExtResource( 2 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 64, 64, 64 )
@@ -618,7 +622,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "tileset depression v02.png 4"
-4/texture = ExtResource( 14 )
+4/texture = ExtResource( 2 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 64, 64, 64, 64 )
@@ -632,7 +636,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "tileset depression v02.png 5"
-5/texture = ExtResource( 14 )
+5/texture = ExtResource( 2 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 256, 64, 64, 64 )
@@ -646,7 +650,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "tileset depression v02.png 6"
-6/texture = ExtResource( 14 )
+6/texture = ExtResource( 2 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 128, 64, 64 )
@@ -660,7 +664,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "tileset depression v02.png 7"
-7/texture = ExtResource( 14 )
+7/texture = ExtResource( 2 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 64, 128, 64, 64 )
@@ -674,7 +678,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "tileset depression v02.png 8"
-8/texture = ExtResource( 14 )
+8/texture = ExtResource( 2 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 128, 128, 64, 64 )
@@ -688,7 +692,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 8/shapes = [  ]
 8/z_index = 0
 9/name = "tileset depression v02.png 9"
-9/texture = ExtResource( 14 )
+9/texture = ExtResource( 2 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 192, 128, 64, 64 )
@@ -702,7 +706,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 9/shapes = [  ]
 9/z_index = 0
 10/name = "tileset depression v02.png 10"
-10/texture = ExtResource( 14 )
+10/texture = ExtResource( 2 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 256, 128, 64, 64 )
@@ -716,7 +720,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 10/shapes = [  ]
 10/z_index = 0
 11/name = "tileset depression v02.png 11"
-11/texture = ExtResource( 14 )
+11/texture = ExtResource( 2 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 384, 0, 64, 64 )
@@ -730,7 +734,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 11/shapes = [  ]
 11/z_index = 0
 12/name = "tileset depression v02.png 12"
-12/texture = ExtResource( 14 )
+12/texture = ExtResource( 2 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 384, 64, 64, 64 )
@@ -744,7 +748,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 12/shapes = [  ]
 12/z_index = 0
 13/name = "tileset depression v02.png 13"
-13/texture = ExtResource( 14 )
+13/texture = ExtResource( 2 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 384, 128, 64, 64 )
@@ -758,7 +762,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 13/shapes = [  ]
 13/z_index = 0
 14/name = "tileset depression v02.png 14"
-14/texture = ExtResource( 14 )
+14/texture = ExtResource( 2 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 512, 192, 64, 64 )
@@ -772,7 +776,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 14/shapes = [  ]
 14/z_index = 0
 15/name = "tileset depression v02.png 15"
-15/texture = ExtResource( 14 )
+15/texture = ExtResource( 2 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 384, 256, 64, 64 )
@@ -786,7 +790,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 15/shapes = [  ]
 15/z_index = 0
 16/name = "tileset depression v02.png 16"
-16/texture = ExtResource( 14 )
+16/texture = ExtResource( 2 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 256, 256, 64, 64 )
@@ -800,7 +804,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 16/shapes = [  ]
 16/z_index = 0
 17/name = "tileset depression v02.png 17"
-17/texture = ExtResource( 14 )
+17/texture = ExtResource( 2 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 192, 256, 64, 64 )
@@ -814,7 +818,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 17/shapes = [  ]
 17/z_index = 0
 18/name = "tileset depression v02.png 18"
-18/texture = ExtResource( 14 )
+18/texture = ExtResource( 2 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 128, 256, 64, 64 )
@@ -828,7 +832,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 18/shapes = [  ]
 18/z_index = 0
 19/name = "tileset depression v02.png 19"
-19/texture = ExtResource( 14 )
+19/texture = ExtResource( 2 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 64, 256, 64, 64 )
@@ -842,7 +846,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 19/shapes = [  ]
 19/z_index = 0
 20/name = "tileset depression v02.png 20"
-20/texture = ExtResource( 14 )
+20/texture = ExtResource( 2 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 256, 64, 64 )
@@ -924,7 +928,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="TileSet" id=49]
 0/name = "tilesebig positivet.png 0"
-0/texture = ExtResource( 15 )
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
@@ -945,7 +949,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 0/z_index = 0
 1/name = "tilesebig positivet.png 1"
-1/texture = ExtResource( 15 )
+1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 64, 0, 64, 64 )
@@ -966,7 +970,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 1/z_index = 0
 2/name = "tilesebig positivet.png 2"
-2/texture = ExtResource( 15 )
+2/texture = ExtResource( 3 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 128, 0, 64, 64 )
@@ -987,7 +991,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 2/z_index = 0
 3/name = "tilesebig positivet.png 3"
-3/texture = ExtResource( 15 )
+3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 256, 0, 64, 64 )
@@ -1008,7 +1012,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 3/z_index = 0
 4/name = "tilesebig positivet.png 4"
-4/texture = ExtResource( 15 )
+4/texture = ExtResource( 3 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 64, 64, 64 )
@@ -1029,7 +1033,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 4/z_index = 0
 5/name = "tilesebig positivet.png 5"
-5/texture = ExtResource( 15 )
+5/texture = ExtResource( 3 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 64, 64, 64, 64 )
@@ -1050,7 +1054,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 5/z_index = 0
 6/name = "tilesebig positivet.png 6"
-6/texture = ExtResource( 15 )
+6/texture = ExtResource( 3 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 128, 64, 64, 64 )
@@ -1071,7 +1075,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 6/z_index = 0
 7/name = "tilesebig positivet.png 7"
-7/texture = ExtResource( 15 )
+7/texture = ExtResource( 3 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 256, 64, 64, 64 )
@@ -1092,7 +1096,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 7/z_index = 0
 8/name = "tilesebig positivet.png 8"
-8/texture = ExtResource( 15 )
+8/texture = ExtResource( 3 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 256, 128, 64, 64 )
@@ -1113,7 +1117,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 8/z_index = 0
 9/name = "tilesebig positivet.png 9"
-9/texture = ExtResource( 15 )
+9/texture = ExtResource( 3 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 128, 128, 64, 64 )
@@ -1134,7 +1138,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 9/z_index = 0
 10/name = "tilesebig positivet.png 10"
-10/texture = ExtResource( 15 )
+10/texture = ExtResource( 3 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 64, 128, 64, 64 )
@@ -1155,7 +1159,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 10/z_index = 0
 11/name = "tilesebig positivet.png 11"
-11/texture = ExtResource( 15 )
+11/texture = ExtResource( 3 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 128, 64, 64 )
@@ -1176,7 +1180,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 11/z_index = 0
 12/name = "tilesebig positivet.png 12"
-12/texture = ExtResource( 15 )
+12/texture = ExtResource( 3 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 256, 64, 64 )
@@ -1197,7 +1201,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 12/z_index = 0
 13/name = "tilesebig positivet.png 13"
-13/texture = ExtResource( 15 )
+13/texture = ExtResource( 3 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 64, 256, 64, 64 )
@@ -1218,7 +1222,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 13/z_index = 0
 14/name = "tilesebig positivet.png 14"
-14/texture = ExtResource( 15 )
+14/texture = ExtResource( 3 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 128, 256, 64, 64 )
@@ -1239,7 +1243,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 14/z_index = 0
 15/name = "tilesebig positivet.png 15"
-15/texture = ExtResource( 15 )
+15/texture = ExtResource( 3 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 256, 256, 64, 64 )
@@ -1260,7 +1264,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 15/z_index = 0
 16/name = "tilesebig positivet.png 16"
-16/texture = ExtResource( 15 )
+16/texture = ExtResource( 3 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 384, 192, 64, 64 )
@@ -1281,7 +1285,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 16/z_index = 0
 17/name = "tilesebig positivet.png 17"
-17/texture = ExtResource( 15 )
+17/texture = ExtResource( 3 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 320, 320, 64, 64 )
@@ -1302,7 +1306,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 17/z_index = 0
 18/name = "tilesebig positivet.png 18"
-18/texture = ExtResource( 15 )
+18/texture = ExtResource( 3 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 320, 192, 64, 64 )
@@ -1323,7 +1327,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 18/z_index = 0
 19/name = "tilesebig positivet.png 19"
-19/texture = ExtResource( 15 )
+19/texture = ExtResource( 3 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 384, 128, 64, 64 )
@@ -1344,7 +1348,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 19/z_index = 0
 20/name = "tilesebig positivet.png 20"
-20/texture = ExtResource( 15 )
+20/texture = ExtResource( 3 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 320, 256, 64, 64 )
@@ -1365,7 +1369,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 20/z_index = 0
 21/name = "tilesebig positivet.png 21"
-21/texture = ExtResource( 15 )
+21/texture = ExtResource( 3 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 384, 320, 64, 64 )
@@ -1389,11 +1393,176 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 [sub_resource type="OccluderPolygon2D" id=50]
 polygon = PoolVector2Array( -377.131, -269.347, -377.131, -273.613, -373.038, -273.588, -373.163, -278.028, -365.201, -278.028, -365.151, -290.951, -361.207, -290.975, -361.158, -295.316, -357.189, -295.341, -357.246, -299.658, -353.172, -299.611, -353.196, -304.036, -349.263, -304.013, -349.239, -308.297, -345.259, -308.32, -345.283, -312.628, -337.253, -312.628, -337.276, -316.982, -325.383, -316.959, -325.29, -321.29, -313.327, -321.267, -313.417, -320.91, -324.975, -320.96, -325.124, -316.743, -337.029, -316.743, -337.079, -312.477, -345.065, -312.477, -345.065, -308.013, -348.984, -308.112, -349.083, -303.747, -353.002, -303.846, -353.002, -299.58, -357.169, -299.53, -356.971, -295.264, -360.741, -295.214, -360.988, -290.8, -365.007, -290.75, -365.155, -277.952, -373.042, -277.853, -372.993, -273.388, -376.961, -273.537 )
 
-[sub_resource type="SegmentShape2D" id=51]
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 96.4067, 30.9133 )
+
+[sub_resource type="Animation" id=52]
+resource_name = "fallingplatform"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.10957 ),
+"update": 1,
+"values": [ NodePath("..") ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ) ]
+}
+
+[sub_resource type="Animation" id=53]
+resource_name = "fallingplatform"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.10957 ),
+"update": 1,
+"values": [ NodePath("..") ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ) ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "fallingplatform"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.10957 ),
+"update": 1,
+"values": [ NodePath("..") ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ) ]
+}
+
+[sub_resource type="Animation" id=55]
+resource_name = "fallingplatform"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.10957 ),
+"update": 1,
+"values": [ NodePath("..") ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ) ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "fallingplatform"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.10957 ),
+"update": 1,
+"values": [ NodePath("..") ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ) ]
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "fallingplatform"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.10957 ),
+"update": 1,
+"values": [ NodePath("..") ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ) ]
+}
+
+[sub_resource type="SegmentShape2D" id=58]
 a = Vector2( 2803.93, 1.79675 )
 b = Vector2( -2423.02, -43.0146 )
 
-[sub_resource type="GDScript" id=52]
+[sub_resource type="GDScript" id=59]
 script/source = "extends KinematicBody2D
 
 #VARIABLES
@@ -1491,202 +1660,183 @@ func _on_Area2D_body_entered(body):
 
 "
 
-[sub_resource type="DynamicFont" id=53]
+[sub_resource type="DynamicFont" id=60]
 size = 60
-font_data = ExtResource( 26 )
+font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=54]
+[sub_resource type="DynamicFont" id=61]
 size = 60
-font_data = ExtResource( 26 )
+font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=55]
+[sub_resource type="DynamicFont" id=62]
 size = 60
-font_data = ExtResource( 26 )
+font_data = ExtResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=56]
-bg_color = Color( 0.054902, 0.0117647, 0.0117647, 0.301961 )
-
-[sub_resource type="DynamicFont" id=57]
-size = 25
-font_data = ExtResource( 26 )
-
-[sub_resource type="DynamicFont" id=58]
-size = 25
-font_data = ExtResource( 26 )
+[sub_resource type="RectangleShape2D" id=63]
+extents = Vector2( 43.7539, 65.0336 )
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( 148.325, -78.4003 )
-
-[node name="Node2D" type="Node2D" parent="."]
 position = Vector2( -1, 0 )
 
-[node name="Camera2D" type="Camera2D" parent="Node2D"]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 261.148, -112.693 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
 
-[node name="Timer" type="Timer" parent="Node2D"]
+[node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="bordery" type="Area2D" parent="Node2D"]
+[node name="bordery" type="Area2D" parent="."]
 position = Vector2( 126.053, 672.458 )
-script = ExtResource( 5 )
+script = ExtResource( 10 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/bordery"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bordery"]
 position = Vector2( 59.8438, 485.36 )
 shape = SubResource( 1 )
 
-[node name="TileMap2" type="TileMap" parent="Node2D"]
+[node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource( 24 )
 format = 1
 
-[node name="TileMap deprese2" type="TileMap" parent="Node2D/TileMap2"]
+[node name="TileMap deprese2" type="TileMap" parent="TileMap2"]
 tile_set = SubResource( 26 )
 format = 1
-tile_data = PoolIntArray( 655341, 4, 0, 655342, 4, 0, 655343, 4, 0, 655344, 4, 0, 655345, 4, 0, 655346, 4, 0, 655347, 4, 0, 655348, 4, 0, 655349, 4, 0, 655350, 4, 0, 655351, 4, 0, 655352, 4, 0, 655353, 4, 0, 655354, 4, 0, 655355, 4, 0, 655356, 4, 0, 655357, 4, 0, 655358, 4, 0, 655359, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 4, 0, 589841, 4, 0, 589842, 4, 0, 589843, 4, 0, 589844, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589848, 4, 0, 589849, 4, 0, 589850, 4, 0, 589851, 4, 0, 589852, 4, 0, 589853, 4, 0, 589854, 4, 0, 589855, 4, 0, 589856, 4, 0, 720877, 4, 0, 720878, 4, 0, 720879, 4, 0, 720880, 4, 0, 720881, 4, 0, 720882, 4, 0, 720883, 4, 0, 720884, 4, 0, 720885, 4, 0, 720886, 4, 0, 720887, 4, 0, 720888, 4, 0, 720889, 4, 0, 720890, 4, 0, 720891, 4, 0, 720892, 4, 0, 720893, 4, 0, 720894, 4, 0, 720895, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655376, 4, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0, 655380, 4, 0, 655381, 4, 0, 655382, 4, 0, 655383, 4, 0, 655384, 4, 0, 655385, 4, 0, 655386, 4, 0, 655387, 4, 0, 655388, 4, 0, 655389, 4, 0, 655390, 4, 0, 655391, 4, 0, 655392, 4, 0 )
-script = ExtResource( 12 )
+tile_data = PoolIntArray( -917523, 4, 0, -917522, 4, 0, -917521, 4, 0, -917520, 4, 0, -917519, 4, 0, -917518, 4, 0, -917517, 4, 0, -917516, 4, 0, -917515, 4, 0, -917514, 4, 0, -917513, 4, 0, -917512, 4, 0, -917511, 4, 0, -917510, 4, 0, -917509, 4, 0, -917508, 4, 0, -917507, 4, 0, -917506, 4, 0, -917505, 4, 0, -983040, 4, 0, -983039, 4, 0, -983038, 4, 0, -983037, 4, 0, -983036, 4, 0, -983035, 4, 0, -983034, 4, 0, -983033, 4, 0, -983032, 4, 0, -983031, 4, 0, -983030, 4, 0, -983029, 4, 0, -983028, 4, 0, -983027, 4, 0, -983026, 4, 0, -983025, 4, 0, -983024, 4, 0, -983023, 4, 0, -983022, 4, 0, -983021, 4, 0, -983020, 4, 0, -983019, 4, 0, -983018, 4, 0, -983017, 4, 0, -983016, 4, 0, -983015, 4, 0, -983014, 4, 0, -851987, 4, 0, -851986, 4, 0, -851985, 8, 0, -851984, 8, 0, -851983, 8, 0, -851982, 8, 0, -851981, 8, 0, -851980, 8, 0, -851979, 8, 0, -851978, 8, 0, -851977, 8, 0, -851976, 8, 0, -851975, 8, 0, -851974, 8, 0, -851973, 8, 0, -851972, 8, 0, -851971, 8, 0, -851970, 8, 0, -851969, 8, 0, -917504, 8, 0, -917503, 8, 0, -917502, 8, 0, -917501, 8, 0, -917500, 8, 0, -917499, 8, 0, -917498, 8, 0, -917497, 8, 0, -917496, 8, 0, -917495, 8, 0, -917494, 8, 0, -917493, 8, 0, -917492, 8, 0, -917491, 8, 0, -917490, 8, 0, -917489, 8, 0, -917488, 8, 0, -917487, 8, 0, -917486, 8, 0, -917485, 8, 0, -917484, 8, 0, -917483, 8, 0, -917482, 8, 0, -917481, 8, 0, -917480, 8, 0, -917479, 4, 0, -917478, 4, 0, -786451, 4, 0, -786450, 5, 0, -851943, 3, 0, -851942, 4, 0, -720915, 4, 0, -720914, 5, 0, -786407, 3, 0, -786406, 4, 0, -655379, 4, 0, -655378, 5, 0, -720871, 3, 0, -720870, 4, 0, -589843, 4, 0, -589842, 5, 0, -655335, 3, 0, -655334, 4, 0, -524307, 4, 0, -524306, 5, 0, -589799, 3, 0, -589798, 4, 0, -458771, 4, 0, -458770, 5, 0, -458768, 15, 0, -524263, 3, 0, -524262, 4, 0, -393235, 4, 0, -393234, 5, 0, -458727, 3, 0, -458726, 4, 0, -327699, 4, 0, -327698, 5, 0, -393191, 3, 0, -393190, 4, 0, -262163, 4, 0, -262162, 5, 0, -262159, 15, 0, -327655, 3, 0, -327654, 4, 0, -196627, 4, 0, -196626, 5, 0, -262119, 3, 0, -262118, 4, 0, -131091, 4, 0, -131090, 4, 0, -131089, 1, 0, -131088, 1, 0, -131087, 1, 0, -131086, 1, 0, -131085, 1, 0, -131084, 1, 0, -131083, 1, 0, -131082, 1, 0, -131081, 1, 0, -131080, 1, 0, -131079, 1, 0, -131078, 1, 0, -131077, 1, 0, -131076, 1, 0, -196583, 4, 0, -196582, 4, 0, -65555, 4, 0, -65554, 4, 0, -65553, 4, 0, -65552, 4, 0, -65551, 4, 0, -65550, 4, 0, -65549, 4, 0, -65548, 4, 0, -65547, 4, 0, -65546, 4, 0, -65545, 4, 0, -65544, 4, 0, -65543, 4, 0, -65542, 4, 0, -65541, 4, 0, -65540, 4, 0, -131068, 0, 0, -131067, 17, 0, -131066, 17, 0, -131065, 17, 0, -131064, 17, 0, -131063, 17, 0, -131062, 17, 0, -131061, 17, 0, -131060, 17, 0, -131059, 17, 0, -131058, 17, 0, -131057, 17, 0, -131056, 17, 0, -131055, 17, 0, -131054, 17, 0, -131053, 17, 0, -131052, 17, 0, -131051, 17, 0, -131047, 4, 0, -131046, 4, 0, -19, 4, 0, -18, 4, 0, -17, 6, 0, -16, 7, 0, -15, 7, 0, -14, 7, 0, -13, 7, 0, -12, 7, 0, -11, 7, 0, -10, 7, 0, -9, 7, 0, -8, 7, 0, -7, 7, 0, -6, 7, 0, -5, 7, 0, -4, 10, 0, -65532, 12, 0, -65511, 4, 0, -65510, 4, 0, 65517, 4, 0, 65518, 5, 0, 4, 12, 0, 25, 4, 0, 26, 4, 0, 131053, 4, 0, 131054, 5, 0, 65538, 0, 0, 65539, 1, 0, 65540, 5, 0, 65561, 4, 0, 65562, 4, 0, 196589, 4, 0, 196590, 5, 0, 131074, 3, 0, 131075, 4, 0, 131076, 5, 0, 131097, 4, 0, 131098, 4, 0, 262125, 4, 0, 262126, 5, 0, 196610, 3, 0, 196611, 4, 0, 196612, 5, 0, 196613, 18, 0, 196614, 18, 0, 196615, 18, 0, 196616, 18, 0, 196633, 4, 0, 196634, 4, 0, 327661, 4, 0, 327662, 5, 0, 262146, 3, 0, 262147, 4, 0, 262148, 5, 0, 262169, 4, 0, 262170, 4, 0, 393197, 4, 0, 393198, 5, 0, 393215, 20, 0, 327680, 1, 0, 327681, 1, 0, 327682, 4, 0, 327683, 4, 0, 327684, 5, 0, 327705, 4, 0, 327706, 4, 0, 458733, 4, 0, 458734, 5, 0, 393216, 6, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 5, 0, 393225, 15, 0, 393241, 4, 0, 393242, 4, 0, 524269, 4, 0, 524270, 5, 0, 524283, 1, 0, 524284, 1, 0, 458753, 6, 0, 458754, 4, 0, 458755, 4, 0, 458756, 5, 0, 458774, 20, 0, 458775, 16, 0, 458777, 4, 0, 458778, 4, 0, 589805, 4, 0, 589806, 5, 0, 589819, 3, 0, 589820, 5, 0, 524290, 3, 0, 524291, 4, 0, 524292, 5, 0, 524304, 15, 0, 524313, 4, 0, 524314, 4, 0, 655341, 4, 0, 655342, 5, 0, 655355, 3, 0, 655356, 5, 0, 589826, 3, 0, 589827, 4, 0, 589828, 5, 0, 589849, 4, 0, 589850, 4, 0, 720877, 4, 0, 720878, 4, 0, 720879, 1, 0, 720880, 1, 0, 720881, 1, 0, 720882, 1, 0, 720883, 1, 0, 720884, 1, 0, 720885, 1, 0, 720886, 1, 0, 720887, 1, 0, 720888, 1, 0, 720889, 1, 0, 720890, 1, 0, 720891, 4, 0, 720892, 4, 0, 720893, 1, 0, 720894, 1, 0, 720895, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 4, 0, 655364, 5, 0, 655385, 4, 0, 655386, 4, 0, 786413, 4, 0, 786414, 4, 0, 786415, 4, 0, 786416, 4, 0, 786417, 4, 0, 786418, 4, 0, 786419, 4, 0, 786420, 4, 0, 786421, 4, 0, 786422, 4, 0, 786423, 4, 0, 786424, 4, 0, 786425, 4, 0, 786426, 4, 0, 786427, 4, 0, 786428, 4, 0, 786429, 4, 0, 786430, 4, 0, 786431, 4, 0, 720896, 4, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0, 720900, 5, 0, 720921, 4, 0, 720922, 4, 0 )
+script = ExtResource( 5 )
 
-[node name="TileMap" type="TileMap" parent="Node2D/TileMap2"]
+[node name="TileMap" type="TileMap" parent="TileMap2"]
 visible = false
 tile_set = SubResource( 49 )
 format = 1
-tile_data = PoolIntArray( 655341, 1, 0, 655342, 1, 0, 655343, 1, 0, 655344, 1, 0, 655345, 1, 0, 655346, 1, 0, 655347, 1, 0, 655348, 1, 0, 655349, 1, 0, 655350, 1, 0, 655351, 1, 0, 655352, 1, 0, 655353, 1, 0, 655354, 1, 0, 655355, 1, 0, 655356, 1, 0, 655357, 1, 0, 655358, 1, 0, 655359, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 589840, 1, 0, 589841, 1, 0, 589842, 1, 0, 589843, 1, 0, 589844, 1, 0, 589845, 1, 0, 589846, 1, 0, 589847, 1, 0, 589848, 1, 0, 589849, 1, 0, 589850, 1, 0, 589851, 1, 0, 589852, 1, 0, 589853, 1, 0, 589854, 1, 0, 589855, 1, 0, 589856, 1, 0, 720877, 5, 0, 720878, 5, 0, 720879, 5, 0, 720880, 5, 0, 720881, 5, 0, 720882, 5, 0, 720883, 5, 0, 720884, 5, 0, 720885, 5, 0, 720886, 5, 0, 720887, 5, 0, 720888, 5, 0, 720889, 5, 0, 720890, 5, 0, 720891, 5, 0, 720892, 5, 0, 720893, 5, 0, 720894, 5, 0, 720895, 5, 0, 655360, 5, 0, 655361, 5, 0, 655362, 5, 0, 655363, 5, 0, 655364, 5, 0, 655365, 5, 0, 655366, 5, 0, 655367, 5, 0, 655368, 5, 0, 655369, 5, 0, 655370, 5, 0, 655371, 5, 0, 655372, 5, 0, 655373, 5, 0, 655374, 5, 0, 655375, 5, 0, 655376, 5, 0, 655377, 5, 0, 655378, 5, 0, 655379, 5, 0, 655380, 5, 0, 655381, 5, 0, 655382, 5, 0, 655383, 5, 0, 655384, 5, 0, 655385, 5, 0, 655386, 5, 0, 655387, 5, 0, 655388, 5, 0, 655389, 5, 0, 655390, 5, 0, 655391, 5, 0, 655392, 5, 0 )
-script = ExtResource( 11 )
+tile_data = PoolIntArray( -917523, 5, 0, -917522, 5, 0, -917521, 5, 0, -917520, 5, 0, -917519, 5, 0, -917518, 5, 0, -917517, 5, 0, -917516, 5, 0, -917515, 5, 0, -917514, 5, 0, -917513, 5, 0, -917512, 5, 0, -917511, 5, 0, -917510, 5, 0, -917509, 5, 0, -917508, 5, 0, -917507, 5, 0, -917506, 5, 0, -917505, 5, 0, -983040, 5, 0, -983039, 5, 0, -983038, 5, 0, -983037, 5, 0, -983036, 5, 0, -983035, 5, 0, -983034, 5, 0, -983033, 5, 0, -983032, 5, 0, -983031, 5, 0, -983030, 5, 0, -983029, 5, 0, -983028, 5, 0, -983027, 5, 0, -983026, 5, 0, -983025, 5, 0, -983024, 5, 0, -983023, 5, 0, -983022, 5, 0, -983021, 5, 0, -983020, 5, 0, -983019, 5, 0, -983018, 5, 0, -983017, 5, 0, -983016, 5, 0, -983015, 5, 0, -983014, 5, 0, -851987, 5, 0, -851986, 5, 0, -851985, 10, 0, -851984, 10, 0, -851983, 10, 0, -851982, 10, 0, -851981, 10, 0, -851980, 10, 0, -851979, 10, 0, -851978, 10, 0, -851977, 10, 0, -851976, 10, 0, -851975, 10, 0, -851974, 10, 0, -851973, 10, 0, -851972, 10, 0, -851971, 10, 0, -851970, 10, 0, -851969, 10, 0, -917504, 10, 0, -917503, 10, 0, -917502, 10, 0, -917501, 10, 0, -917500, 10, 0, -917499, 10, 0, -917498, 10, 0, -917497, 10, 0, -917496, 10, 0, -917495, 10, 0, -917494, 10, 0, -917493, 10, 0, -917492, 10, 0, -917491, 10, 0, -917490, 10, 0, -917489, 10, 0, -917488, 10, 0, -917487, 10, 0, -917486, 10, 0, -917485, 10, 0, -917484, 10, 0, -917483, 10, 0, -917482, 10, 0, -917481, 10, 0, -917480, 10, 0, -917479, 5, 0, -917478, 5, 0, -786451, 5, 0, -786450, 6, 0, -851943, 4, 0, -851942, 5, 0, -720915, 5, 0, -720914, 6, 0, -786407, 4, 0, -786406, 5, 0, -655379, 5, 0, -655378, 6, 0, -720871, 4, 0, -720870, 5, 0, -589843, 5, 0, -589842, 6, 0, -655335, 4, 0, -655334, 5, 0, -524307, 5, 0, -524306, 6, 0, -589799, 4, 0, -589798, 5, 0, -458771, 5, 0, -458770, 6, 0, -458768, 15, 0, -524263, 4, 0, -524262, 5, 0, -393235, 5, 0, -393234, 6, 0, -458727, 4, 0, -458726, 5, 0, -327699, 5, 0, -327698, 6, 0, -393191, 4, 0, -393190, 5, 0, -262163, 5, 0, -262162, 6, 0, -262159, 15, 0, -327655, 4, 0, -327654, 5, 0, -196627, 5, 0, -196626, 6, 0, -262136, 15, 0, -262133, 15, 0, -262119, 4, 0, -262118, 5, 0, -131091, 5, 0, -131090, 17, 0, -131089, 1, 0, -131088, 1, 0, -131087, 1, 0, -131086, 1, 0, -131085, 1, 0, -131084, 1, 0, -131083, 1, 0, -131082, 1, 0, -131081, 1, 0, -131080, 1, 0, -131079, 1, 0, -131078, 1, 0, -131077, 1, 0, -131076, 2, 0, -196583, 4, 0, -196582, 5, 0, -65555, 5, 0, -65554, 5, 0, -65553, 5, 0, -65552, 5, 0, -65551, 5, 0, -65550, 5, 0, -65549, 5, 0, -65548, 5, 0, -65547, 5, 0, -65546, 5, 0, -65545, 5, 0, -65544, 5, 0, -65543, 5, 0, -65542, 5, 0, -65541, 5, 0, -65540, 6, 0, -131068, 0, 0, -131067, 13, 0, -131066, 13, 0, -131065, 13, 0, -131064, 13, 0, -131063, 13, 0, -131062, 13, 0, -131061, 13, 0, -131060, 13, 0, -131059, 13, 0, -131058, 13, 0, -131057, 13, 0, -131056, 13, 0, -131055, 13, 0, -131054, 13, 0, -131053, 13, 0, -131052, 13, 0, -131051, 14, 0, -131047, 4, 0, -131046, 5, 0, -19, 5, 0, -18, 5, 0, -17, 10, 0, -16, 10, 0, -15, 10, 0, -14, 10, 0, -13, 10, 0, -12, 10, 0, -11, 10, 0, -10, 10, 0, -9, 10, 0, -8, 10, 0, -7, 10, 0, -6, 10, 0, -5, 10, 0, -4, 9, 0, -65532, 7, 0, -65511, 4, 0, -65510, 5, 0, 65517, 5, 0, 65518, 6, 0, 4, 7, 0, 25, 4, 0, 26, 5, 0, 131053, 5, 0, 131054, 6, 0, 65538, 0, 0, 65539, 1, 0, 65540, 16, 0, 65561, 4, 0, 65562, 5, 0, 196589, 5, 0, 196590, 6, 0, 131074, 4, 0, 131075, 5, 0, 131076, 5, 0, 131097, 4, 0, 131098, 5, 0, 262125, 5, 0, 262126, 6, 0, 196610, 4, 0, 196611, 5, 0, 196612, 5, 0, 196613, 13, 0, 196614, 13, 0, 196615, 13, 0, 196616, 14, 0, 196633, 4, 0, 196634, 5, 0, 327661, 5, 0, 327662, 6, 0, 262146, 4, 0, 262147, 5, 0, 262148, 6, 0, 262169, 4, 0, 262170, 5, 0, 393197, 5, 0, 393198, 6, 0, 393215, 12, 0, 327680, 1, 0, 327681, 1, 0, 327682, 16, 0, 327683, 5, 0, 327684, 6, 0, 327705, 4, 0, 327706, 5, 0, 458733, 5, 0, 458734, 6, 0, 393216, 11, 0, 393217, 5, 0, 393218, 5, 0, 393219, 5, 0, 393220, 6, 0, 393225, 15, 0, 393241, 4, 0, 393242, 5, 0, 524269, 5, 0, 524270, 6, 0, 524283, 0, 0, 524284, 2, 0, 458753, 11, 0, 458754, 5, 0, 458755, 5, 0, 458756, 6, 0, 458774, 12, 0, 458775, 14, 0, 458777, 4, 0, 458778, 5, 0, 589805, 5, 0, 589806, 6, 0, 589819, 4, 0, 589820, 6, 0, 524290, 4, 0, 524291, 5, 0, 524292, 6, 0, 524304, 15, 0, 524313, 4, 0, 524314, 5, 0, 655341, 5, 0, 655342, 6, 0, 655355, 4, 0, 655356, 6, 0, 589826, 4, 0, 589827, 5, 0, 589828, 6, 0, 589849, 4, 0, 589850, 5, 0, 720877, 5, 0, 720878, 17, 0, 720879, 1, 0, 720880, 1, 0, 720881, 1, 0, 720882, 1, 0, 720883, 1, 0, 720884, 1, 0, 720885, 1, 0, 720886, 1, 0, 720887, 1, 0, 720888, 1, 0, 720889, 1, 0, 720890, 1, 0, 720891, 16, 0, 720892, 17, 0, 720893, 1, 0, 720894, 1, 0, 720895, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 16, 0, 655363, 5, 0, 655364, 6, 0, 655385, 4, 0, 655386, 5, 0, 786413, 5, 0, 786414, 5, 0, 786415, 5, 0, 786416, 5, 0, 786417, 5, 0, 786418, 5, 0, 786419, 5, 0, 786420, 5, 0, 786421, 5, 0, 786422, 5, 0, 786423, 5, 0, 786424, 5, 0, 786425, 5, 0, 786426, 5, 0, 786427, 5, 0, 786428, 5, 0, 786429, 5, 0, 786430, 5, 0, 786431, 5, 0, 720896, 5, 0, 720897, 5, 0, 720898, 5, 0, 720899, 5, 0, 720900, 6, 0, 720921, 4, 0, 720922, 5, 0 )
+script = ExtResource( 6 )
 
-[node name="depressive set" type="Node2D" parent="Node2D"]
+[node name="depressive set" type="Node2D" parent="."]
 show_behind_parent = true
-script = ExtResource( 13 )
+script = ExtResource( 7 )
 
-[node name="bacground depressive1" type="Sprite" parent="Node2D/depressive set"]
+[node name="bacground depressive1" type="Sprite" parent="depressive set"]
 show_behind_parent = true
-position = Vector2( -3347.16, -456.268 )
+position = Vector2( 160.797, -23.7797 )
 scale = Vector2( 3.98898, 4.33553 )
-texture = ExtResource( 24 )
+texture = ExtResource( 13 )
 
-[node name="bacground depressive2" type="Sprite" parent="Node2D/depressive set"]
+[node name="bacground depressive2" type="Sprite" parent="depressive set"]
 show_behind_parent = true
-position = Vector2( -2244.78, -205.822 )
+position = Vector2( -668.304, -866.927 )
 scale = Vector2( 3.98898, 4.33553 )
-texture = ExtResource( 24 )
+texture = ExtResource( 13 )
 
-[node name="bacground depressive3" type="Sprite" parent="Node2D/depressive set"]
+[node name="bacground depressive3" type="Sprite" parent="depressive set"]
 show_behind_parent = true
-position = Vector2( -2918.79, -1615.44 )
+position = Vector2( 2244.99, -436.644 )
 rotation = 4.71239
 scale = Vector2( 3.98898, 4.33553 )
-texture = ExtResource( 24 )
+texture = ExtResource( 13 )
 flip_h = true
 
-[node name="bacground depressive6" type="Sprite" parent="Node2D/depressive set"]
+[node name="bacground depressive6" type="Sprite" parent="depressive set"]
 show_behind_parent = true
-position = Vector2( -2384.12, -961.37 )
+position = Vector2( 2245.1, 389.488 )
 rotation = 4.71239
 scale = Vector2( 3.98898, 4.33553 )
-texture = ExtResource( 24 )
+texture = ExtResource( 13 )
 flip_h = true
 
-[node name="bacground depressive4" type="Sprite" parent="Node2D/depressive set"]
+[node name="bacground depressive4" type="Sprite" parent="depressive set"]
 show_behind_parent = true
-position = Vector2( -3636.02, -368.802 )
+position = Vector2( -676.69, 719.704 )
 scale = Vector2( 3.98898, 4.33553 )
-texture = ExtResource( 24 )
+texture = ExtResource( 13 )
 flip_h = true
 
-[node name="bacground depressive5" type="Sprite" parent="Node2D/depressive set"]
+[node name="bacground depressive5" type="Sprite" parent="depressive set"]
 show_behind_parent = true
-position = Vector2( -3113.24, 112.14 )
+position = Vector2( 998.064, -128.132 )
 rotation = 3.14159
 scale = Vector2( 3.98898, 4.33553 )
-texture = ExtResource( 24 )
+texture = ExtResource( 13 )
 flip_h = true
 
-[node name="609eefe0d1363" type="Sprite" parent="Node2D/depressive set"]
+[node name="609eefe0d1363" type="Sprite" parent="depressive set"]
 position = Vector2( 431.684, -214.746 )
 scale = Vector2( 1.27208, 1.27208 )
 z_index = -2
-texture = ExtResource( 25 )
+texture = ExtResource( 15 )
 
-[node name="Light2D" type="Light2D" parent="Node2D/depressive set"]
-visible = false
+[node name="Light2D" type="Light2D" parent="depressive set"]
 position = Vector2( -752.27, -516.386 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 22 )
+texture = ExtResource( 12 )
 texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
-[node name="Light2D2" type="Light2D" parent="Node2D/depressive set"]
-visible = false
+[node name="Light2D2" type="Light2D" parent="depressive set"]
 position = Vector2( -449.601, 134.449 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 22 )
+texture = ExtResource( 12 )
 texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
-[node name="Light2D3" type="Light2D" parent="Node2D/depressive set"]
-visible = false
-position = Vector2( 1003.65, -202.977 )
+[node name="Light2D3" type="Light2D" parent="depressive set"]
+position = Vector2( 317.114, -469.962 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 22 )
+texture = ExtResource( 12 )
 texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
-[node name="Light2D4" type="Light2D" parent="Node2D/depressive set"]
-visible = false
+[node name="Light2D4" type="Light2D" parent="depressive set"]
 position = Vector2( 748.57, 65.2384 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 22 )
+texture = ExtResource( 12 )
 texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
-[node name="Light2D5" type="Light2D" parent="Node2D/depressive set"]
-visible = false
+[node name="Light2D5" type="Light2D" parent="depressive set"]
 position = Vector2( 1001.66, -656.378 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 22 )
+texture = ExtResource( 12 )
 texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
-[node name="Light2D7" type="Light2D" parent="Node2D/depressive set"]
-visible = false
-position = Vector2( 993.739, 108.821 )
+[node name="Light2D7" type="Light2D" parent="depressive set"]
+position = Vector2( 1010.69, 231.719 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 22 )
+texture = ExtResource( 12 )
 texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
-[node name="Light2D6" type="Light2D" parent="Node2D/depressive set"]
-visible = false
-position = Vector2( -857.704, 277.433 )
+[node name="Light2D6" type="Light2D" parent="depressive set"]
+position = Vector2( -857.704, 281.671 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 22 )
+texture = ExtResource( 12 )
 texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/depressive set"]
-visible = false
+[node name="LightOccluder2D" type="LightOccluder2D" parent="depressive set"]
 occluder = SubResource( 50 )
 
-[node name="positive set" type="Node2D" parent="Node2D"]
+[node name="positive set" type="Node2D" parent="."]
 visible = false
 show_behind_parent = true
 position = Vector2( -1.52588e-05, 7.62939e-06 )
-script = ExtResource( 19 )
+script = ExtResource( 9 )
 
-[node name="movingplatform2" parent="Node2D/positive set" instance=ExtResource( 8 )]
+[node name="movingplatform2" parent="positive set" instance=ExtResource( 1 )]
 position = Vector2( -1942.59, -176.499 )
 z_index = 1
 z_as_relative = false
@@ -1694,63 +1844,306 @@ move_speed = 0.1
 move_distance = 1000.0
 move_direction = Vector2( -1, 0 )
 
-[node name="output-onlinepngtools (6)" type="Sprite" parent="Node2D/positive set"]
-position = Vector2( 249.279, -120.018 )
-scale = Vector2( 1.51741, 1.48954 )
-texture = ExtResource( 23 )
+[node name="output-onlinepngtools (6)" type="Sprite" parent="positive set"]
+position = Vector2( 241.616, -88.5733 )
+scale = Vector2( 1.41132, 1.41132 )
+texture = ExtResource( 14 )
 
-[node name="Light2D" type="Light2D" parent="Node2D/positive set"]
-visible = false
-position = Vector2( 80.6589, -420.199 )
-texture = ExtResource( 22 )
+[node name="Light2D" type="Light2D" parent="positive set"]
+position = Vector2( 161.385, -393.29 )
+texture = ExtResource( 12 )
 texture_scale = 1.97
 energy = 0.8
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 7.8
 
-[node name="lever" parent="Node2D/positive set" instance=ExtResource( 4 )]
-position = Vector2( 696.363, 492.809 )
+[node name="lever" parent="positive set" instance=ExtResource( 4 )]
+position = Vector2( -1262.93, -672.157 )
 scale = Vector2( 0.88072, 0.88072 )
 z_index = 1
 z_as_relative = false
 
-[node name="bordery2" type="Area2D" parent="Node2D"]
-position = Vector2( 158.125, 932.6 )
-script = ExtResource( 5 )
+[node name="KinematicBody2D" type="KinematicBody2D" parent="positive set"]
+position = Vector2( -8.22907, -108.382 )
+scale = Vector2( 2.3092, 2.15922 )
+motion/sync_to_physics = true
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/bordery2"]
-position = Vector2( 59.8438, 485.36 )
+[node name="Sprite" type="Sprite" parent="positive set/KinematicBody2D"]
+position = Vector2( -10, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="positive set/KinematicBody2D"]
+position = Vector2( -3.5636, -3.5636 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 51 )
+one_way_collision = true
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Player" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( -719.938, 467.283 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="positive set/KinematicBody2D"]
+anims/fallingplatform = SubResource( 52 )
+
+[node name="ResetTimer" type="Timer" parent="positive set/KinematicBody2D"]
+one_shot = true
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="positive set"]
+position = Vector2( -303.03, -272.875 )
+scale = Vector2( 2.3092, 2.15922 )
+motion/sync_to_physics = true
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="positive set/KinematicBody2D2"]
+position = Vector2( -10, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="positive set/KinematicBody2D2"]
+position = Vector2( -3.5636, -3.5636 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 51 )
+one_way_collision = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="positive set/KinematicBody2D2"]
+anims/fallingplatform = SubResource( 53 )
+
+[node name="ResetTimer" type="Timer" parent="positive set/KinematicBody2D2"]
+one_shot = true
+
+[node name="KinematicBody2D3" type="KinematicBody2D" parent="positive set"]
+position = Vector2( -668.272, -272.875 )
+scale = Vector2( 2.3092, 2.15922 )
+motion/sync_to_physics = true
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="positive set/KinematicBody2D3"]
+position = Vector2( -10, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="positive set/KinematicBody2D3"]
+position = Vector2( -3.5636, -3.5636 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 51 )
+one_way_collision = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="positive set/KinematicBody2D3"]
+anims/fallingplatform = SubResource( 54 )
+
+[node name="ResetTimer" type="Timer" parent="positive set/KinematicBody2D3"]
+one_shot = true
+
+[node name="KinematicBody2D5" type="KinematicBody2D" parent="positive set"]
+position = Vector2( -668.272, -272.875 )
+scale = Vector2( 2.3092, 2.15922 )
+motion/sync_to_physics = true
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="positive set/KinematicBody2D5"]
+position = Vector2( -10, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="positive set/KinematicBody2D5"]
+position = Vector2( -3.5636, -3.5636 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 51 )
+one_way_collision = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="positive set/KinematicBody2D5"]
+anims/fallingplatform = SubResource( 55 )
+
+[node name="ResetTimer" type="Timer" parent="positive set/KinematicBody2D5"]
+one_shot = true
+
+[node name="KinematicBody2D6" type="KinematicBody2D" parent="positive set"]
+position = Vector2( 844, 544.69 )
+scale = Vector2( 2.3092, 2.15922 )
+motion/sync_to_physics = true
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="positive set/KinematicBody2D6"]
+position = Vector2( -10, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="positive set/KinematicBody2D6"]
+position = Vector2( -3.5636, -3.5636 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 51 )
+one_way_collision = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="positive set/KinematicBody2D6"]
+anims/fallingplatform = SubResource( 56 )
+
+[node name="ResetTimer" type="Timer" parent="positive set/KinematicBody2D6"]
+one_shot = true
+
+[node name="KinematicBody2D4" type="KinematicBody2D" parent="positive set"]
+position = Vector2( 1214.4, 283.046 )
+scale = Vector2( 2.3092, 2.15922 )
+motion/sync_to_physics = true
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="positive set/KinematicBody2D4"]
+position = Vector2( -10, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="positive set/KinematicBody2D4"]
+position = Vector2( -3.5636, -3.5636 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 51 )
+one_way_collision = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="positive set/KinematicBody2D4"]
+anims/fallingplatform = SubResource( 57 )
+
+[node name="ResetTimer" type="Timer" parent="positive set/KinematicBody2D4"]
+one_shot = true
+
+[node name="bordery2" type="Area2D" parent="."]
+position = Vector2( 158.125, 932.6 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bordery2"]
+position = Vector2( 59.8438, 485.36 )
+shape = SubResource( 58 )
+
+[node name="Player" parent="." instance=ExtResource( 17 )]
+position = Vector2( -595.128, 506.647 )
 run_speed = 400
 jump_speed = -800
 
-[node name="elevator" parent="Node2D" instance=ExtResource( 6 )]
-position = Vector2( 1555.51, 471.953 )
+[node name="elevator_enter" parent="." instance=ExtResource( 19 )]
+position = Vector2( -962.255, 544.69 )
+scale = Vector2( 4.14005, 4.14005 )
 
-[node name="depression" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( -1051.58, 447.476 )
+[node name="elevator" parent="." instance=ExtResource( 20 )]
+position = Vector2( 431.064, 89.5746 )
+
+[node name="depression" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1206.42, 377.624 )
 z_index = 3
 z_as_relative = false
-script = SubResource( 52 )
-speed_x = 5
-speed_y = 5
+script = SubResource( 59 )
+speed_x = 80
+speed_y = 80
 delay = 4
 
-[node name="spikes" type="Node2D" parent="Node2D"]
-script = ExtResource( 20 )
+[node name="spikes" type="Node2D" parent="."]
+script = ExtResource( 25 )
 
-[node name="Spike" parent="Node2D/spikes" instance=ExtResource( 1 )]
-position = Vector2( -42.7692, 559.192 )
+[node name="Spike" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( -775.695, -210.504 )
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="Node2D"]
+[node name="Spike20" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 753.015, -145.599 )
+
+[node name="Spike21" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 627.306, -145.599 )
+
+[node name="Spike22" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 501.474, -145.599 )
+
+[node name="Spike2" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 393.963, 682.987 )
+
+[node name="Spike7" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( -400.675, -210.504 )
+
+[node name="Spike8" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 517.417, 683.046 )
+
+[node name="Spike23" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1518.65, 683.046 )
+
+[node name="Spike9" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 640.515, 683.047 )
+
+[node name="Spike10" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 765.869, 683.07 )
+
+[node name="Spike11" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 891.169, 683.047 )
+
+[node name="Spike12" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1016.51, 683.035 )
+
+[node name="Spike13" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1141.86, 683.047 )
+
+[node name="Spike14" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1267.22, 683.055 )
+
+[node name="Spike15" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1392.57, 683.107 )
+
+[node name="Spike16" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( -274.928, -210.504 )
+
+[node name="Spike17" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1214.4, -145.599 )
+
+[node name="Spike18" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1340.11, -145.599 )
+
+[node name="Spike19" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( 1090.06, -145.599 )
+
+[node name="Spike3" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( -1024.92, -210.504 )
+
+[node name="Spike4" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( -649.208, -210.504 )
+
+[node name="Spike6" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( -525.312, -210.504 )
+
+[node name="Spike5" parent="spikes" instance=ExtResource( 18 )]
+position = Vector2( -900.648, -210.504 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 pause_mode = 2
-script = ExtResource( 7 )
+script = ExtResource( 11 )
 
-[node name="background" type="ColorRect" parent="Node2D/CanvasLayer2"]
+[node name="background" type="ColorRect" parent="CanvasLayer"]
 visible = false
 modulate = Color( 1, 1, 1, 0.47451 )
 anchor_right = 1.0
@@ -1760,7 +2153,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="continue" type="Button" parent="Node2D/CanvasLayer2"]
+[node name="continue" type="Button" parent="CanvasLayer"]
 visible = false
 anchor_left = 0.428
 anchor_top = 0.367
@@ -1770,14 +2163,14 @@ margin_left = -0.878967
 margin_top = 0.521088
 margin_right = -1.43896
 margin_bottom = 0.20108
-custom_fonts/font = SubResource( 53 )
+custom_fonts/font = SubResource( 60 )
 text = "Continue"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="exit" type="Button" parent="Node2D/CanvasLayer2"]
+[node name="exit" type="Button" parent="CanvasLayer"]
 visible = false
 anchor_left = 0.477
 anchor_top = 0.659
@@ -1787,14 +2180,14 @@ margin_left = 0.659973
 margin_top = 0.279968
 margin_right = -0.660034
 margin_bottom = -0.0400391
-custom_fonts/font = SubResource( 54 )
+custom_fonts/font = SubResource( 61 )
 text = "Exit"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Node2D/CanvasLayer2"]
+[node name="Button" type="Button" parent="CanvasLayer"]
 visible = false
 anchor_left = 0.439
 anchor_top = 0.437
@@ -1804,131 +2197,50 @@ margin_left = 0.119995
 margin_top = 0.039978
 margin_right = -0.120117
 margin_bottom = -0.280029
-custom_fonts/font = SubResource( 55 )
+custom_fonts/font = SubResource( 62 )
 text = "Main menu"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]
-script = ExtResource( 9 )
-
-[node name="Panel" type="Panel" parent="Node2D/CanvasLayer"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 99.0
-margin_top = -179.0
-margin_right = 501.0
-margin_bottom = -74.0
-custom_styles/panel = SubResource( 56 )
+[node name="Key" type="Sprite" parent="."]
+position = Vector2( -982.595, -593.054 )
+scale = Vector2( 0.379731, 0.460034 )
+texture = ExtResource( 21 )
+script = ExtResource( 22 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="Node2D/CanvasLayer/Panel"]
-margin_left = 2.0
-margin_right = 374.0
-margin_bottom = 90.0
-custom_fonts/font = SubResource( 57 )
-text = "    "
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Area2D" type="Area2D" parent="Key"]
 
-[node name="Panel4" type="Panel" parent="Node2D/CanvasLayer"]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -301.0
-margin_top = 94.0
-margin_right = -44.0
-margin_bottom = 238.0
-custom_styles/panel = SubResource( 56 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Node2D/CanvasLayer/Panel4"]
-anchor_right = 0.973
-anchor_bottom = 0.927
-margin_left = 4.0
-margin_top = 5.0
-margin_right = -0.0610046
-margin_bottom = 0.512009
-custom_fonts/font = SubResource( 58 )
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel3" type="Panel" parent="Node2D/CanvasLayer"]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -835.0
-margin_top = 25.0
-margin_right = -540.0
-margin_bottom = 222.0
-custom_styles/panel = SubResource( 56 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Node2D/CanvasLayer/Panel3"]
-anchor_right = 0.973
-anchor_bottom = 0.927
-margin_left = 16.7573
-margin_top = 10.8578
-margin_right = -4.39972
-margin_bottom = -5.65916
-custom_fonts/font = SubResource( 58 )
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel2" type="Panel" parent="Node2D/CanvasLayer"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 603.0
-margin_top = -107.0
-margin_right = 907.0
-margin_bottom = 93.0
-custom_styles/panel = SubResource( 56 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Node2D/CanvasLayer/Panel2"]
-anchor_right = 0.973
-anchor_bottom = 0.927
-margin_left = 15.3431
-margin_top = 12.2722
-margin_right = -9.21094
-margin_bottom = 5.95215
-custom_fonts/font = SubResource( 58 )
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Timer" type="Timer" parent="Node2D/CanvasLayer"]
-
-[node name="Tween" type="Tween" parent="Node2D/CanvasLayer"]
-
-[node name="Timer" type="Timer" parent="."]
-[connection signal="body_entered" from="Node2D/bordery" to="Node2D/bordery" method="_on_Area2D_body_entered"]
-[connection signal="lever_on" from="Node2D/positive set/lever" to="Node2D/positive set/movingplatform2" method="_on_lever_lever_on"]
-[connection signal="body_entered" from="Node2D/bordery2" to="Node2D/bordery2" method="_on_Area2D_body_entered"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/depression" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/spikes" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/positive set" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/TileMap2/TileMap" method="_on_Player_glasses_up"]
-[connection signal="pressed" from="Node2D/CanvasLayer2/continue" to="Node2D/CanvasLayer2" method="_on_Button_pressed"]
-[connection signal="pressed" from="Node2D/CanvasLayer2/exit" to="Node2D/CanvasLayer2" method="_on_Button2_pressed"]
-[connection signal="pressed" from="Node2D/CanvasLayer2/Button" to="Node2D/CanvasLayer2" method="_on_mainmenu_pressed"]
-[connection signal="timeout" from="Node2D/CanvasLayer/Timer" to="Node2D/CanvasLayer" method="_on_Timer_timeout"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key/Area2D"]
+position = Vector2( 0, -16.4325 )
+shape = SubResource( 63 )
+[connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
+[connection signal="lever_on" from="positive set/lever" to="positive set/movingplatform2" method="_on_lever_lever_on"]
+[connection signal="animation_finished" from="positive set/KinematicBody2D/AnimationPlayer" to="positive set/KinematicBody2D" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="positive set/KinematicBody2D/ResetTimer" to="positive set/KinematicBody2D" method="_on_ResetTimer_timeout"]
+[connection signal="animation_finished" from="positive set/KinematicBody2D2/AnimationPlayer" to="positive set/KinematicBody2D2" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="positive set/KinematicBody2D2/ResetTimer" to="positive set/KinematicBody2D2" method="_on_ResetTimer_timeout"]
+[connection signal="animation_finished" from="positive set/KinematicBody2D3/AnimationPlayer" to="positive set/KinematicBody2D3" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="positive set/KinematicBody2D3/ResetTimer" to="positive set/KinematicBody2D3" method="_on_ResetTimer_timeout"]
+[connection signal="animation_finished" from="positive set/KinematicBody2D5/AnimationPlayer" to="positive set/KinematicBody2D5" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="positive set/KinematicBody2D5/ResetTimer" to="positive set/KinematicBody2D5" method="_on_ResetTimer_timeout"]
+[connection signal="animation_finished" from="positive set/KinematicBody2D6/AnimationPlayer" to="positive set/KinematicBody2D6" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="positive set/KinematicBody2D6/ResetTimer" to="positive set/KinematicBody2D6" method="_on_ResetTimer_timeout"]
+[connection signal="animation_finished" from="positive set/KinematicBody2D4/AnimationPlayer" to="positive set/KinematicBody2D4" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="positive set/KinematicBody2D4/ResetTimer" to="positive set/KinematicBody2D4" method="_on_ResetTimer_timeout"]
+[connection signal="body_entered" from="bordery2" to="bordery2" method="_on_Area2D_body_entered"]
+[connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="positive set/movingplatform2" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="positive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="spikes" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="TileMap2/TileMap" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="TileMap2/TileMap deprese2" method="_on_Player_glasses_up"]
+[connection signal="pressed" from="CanvasLayer/continue" to="CanvasLayer" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/exit" to="CanvasLayer" method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer" method="_on_mainmenu_pressed"]
+[connection signal="body_entered" from="Key/Area2D" to="Key" method="_on_Area2D_body_entered"]
