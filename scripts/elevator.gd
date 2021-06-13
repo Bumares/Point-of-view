@@ -3,12 +3,15 @@ extends Node2D
 onready var sprite = get_node("../Player/AnimatedSprite")
 onready var player = get_node("../Player")
 onready var lightoc =  get_node("../Player/AnimatedSprite/LightOccluder2D")
+onready var timer = $Timer
 var vysledek_x = 1
 var vysledek_y = 1
 var scalee = Vector2(1.809, 1.809)
 onready var scale_x = stepify(sprite.scale.x, 0.01)
 onready var scale_y = stepify(sprite.scale.y, 0.01)
 var inelevator = false
+export var nextlevl = "res://scenes/levels/tutorial.tscn"
+
 
 
 func _on_Area2D_body_entered(body):
@@ -18,7 +21,7 @@ func _on_Area2D_body_entered(body):
 		$AnimatedSprite.play("default")
 		$AnimatedSprite/Light2D.visible = true
 		inelevator = true
-		
+		timer.start()
 
 func _physics_process(delta):
 	if inelevator == true:
@@ -42,4 +45,11 @@ func _physics_process(delta):
 			player.position.y = player.position.y - 1
 			sprite.set_scale(scalee)
 
+func _ready():
+	timer.set_wait_time(7)
 
+
+func _on_Timer_timeout():
+	if inelevator == true:
+		get_tree().change_scene(nextlevl)
+		queue_free()

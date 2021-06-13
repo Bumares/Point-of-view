@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://HelvetiPixel.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/levelselect.gd" type="Script" id=2]
-
+[ext_resource path="res://sprites/output-onlinepngtools (6).png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 256
@@ -20,10 +20,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
-color = Color( 0.556863, 0.145098, 0.145098, 1 )
+[node name="ColorRect" type="Sprite" parent="."]
+position = Vector2( 959.54, 540.286 )
+texture = ExtResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1920.0
@@ -44,6 +43,7 @@ margin_bottom = 219.0
 margin_right = 1376.0
 margin_bottom = 219.0
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level  Selection"
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -69,6 +69,7 @@ margin_right = 56.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 56, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -77,6 +78,7 @@ margin_right = 532.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 472, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level 1"
 
 [node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -102,6 +104,7 @@ margin_right = 56.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 56, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -110,6 +113,7 @@ margin_right = 532.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 472, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level 2"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -135,6 +139,7 @@ margin_right = 56.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 56, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer4/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -143,6 +148,7 @@ margin_right = 532.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 472, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level 3"
 
 [node name="CenterContainer5" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -168,6 +174,7 @@ margin_right = 56.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 56, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer5/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -176,6 +183,7 @@ margin_right = 532.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 472, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level 4"
 
 [node name="CenterContainer6" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -201,6 +209,7 @@ margin_right = 56.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 56, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer6/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -209,7 +218,8 @@ margin_right = 532.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 472, 0 )
 custom_fonts/font = SubResource( 2 )
-text = "Level 5"
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tutorial"
 
 [node name="CenterContainer7" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 793.0
@@ -234,6 +244,7 @@ margin_right = 56.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 56, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer7/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -242,4 +253,5 @@ margin_right = 532.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 472, 0 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Main Menu"
