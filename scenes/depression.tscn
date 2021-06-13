@@ -64,6 +64,8 @@ var animation_playing
 
 func _on_Player_glasses_up(test):
 	self.visible = false
+	return
+
 	
 
 func _animation_play():
