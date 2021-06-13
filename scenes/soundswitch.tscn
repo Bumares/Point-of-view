@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/soundswitch.gd" type="Script" id=1]
+[ext_resource path="res://sprites/sound/sound_on.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="SoundSwitch" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = -15.0
+margin_top = -12.0
+margin_right = 17.0
+margin_bottom = 12.0
+custom_styles/focus = SubResource( 1 )
+toggle_mode = true
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="toggled" from="Button" to="." method="_on_Button_toggled"]

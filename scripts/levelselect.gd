@@ -18,11 +18,17 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_down") and current_selection < 5:
 		current_selection += 1
 		set_current_selection(current_selection)
+		if SoundController.sound_on == true:
+			$ButtonSelection_sn.play()
 	if Input.is_action_just_pressed("ui_up") and current_selection > 0:
 		current_selection -= 1
 		set_current_selection(current_selection)
+		if SoundController.sound_on == true:
+			$ButtonSelection_sn.play()
 	if Input.is_action_just_pressed("ui_accept"):
 		handle_selection(current_selection)
+		if SoundController.sound_on == true:
+			$ButtonSelection_sn.play()
 
 func handle_selection(_currnet_selection):
 	if current_selection == 5:

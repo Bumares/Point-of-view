@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=2]
+[gd_scene load_steps=113 format=2]
 
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=2]
@@ -21,6 +21,9 @@
 [ext_resource path="res://scripts/positive set.gd" type="Script" id=19]
 [ext_resource path="res://scripts/pause.gd" type="Script" id=20]
 [ext_resource path="res://HelvetiPixel.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://scenes/soundswitch.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/musicswitch.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/levels/Level2.gd" type="Script" id=24]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -377.131, -269.347, -377.131, -273.613, -373.038, -273.588, -373.163, -278.028, -365.201, -278.028, -365.151, -290.951, -361.207, -290.975, -361.158, -295.316, -357.189, -295.341, -357.246, -299.658, -353.172, -299.611, -353.196, -304.036, -349.263, -304.013, -349.239, -308.297, -345.259, -308.32, -345.283, -312.628, -337.253, -312.628, -337.276, -316.982, -325.383, -316.959, -325.29, -321.29, -313.327, -321.267, -313.417, -320.91, -324.975, -320.96, -325.124, -316.743, -337.029, -316.743, -337.079, -312.477, -345.065, -312.477, -345.065, -308.013, -348.984, -308.112, -349.083, -303.747, -353.002, -303.846, -353.002, -299.58, -357.169, -299.53, -356.971, -295.264, -360.741, -295.214, -360.988, -290.8, -365.007, -290.75, -365.155, -277.952, -373.042, -277.853, -372.993, -273.388, -376.961, -273.537 )
@@ -1542,6 +1545,7 @@ size = 60
 font_data = ExtResource( 21 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 24 )
 
 [node name="depressive set" type="Node2D" parent="."]
 script = ExtResource( 18 )
@@ -1791,7 +1795,7 @@ run_speed = 400
 jump_speed = -800
 
 [node name="elevator_enter" parent="." instance=ExtResource( 7 )]
-position = Vector2( -950.413, 528.155 )
+position = Vector2( -960.457, 492.232 )
 scale = Vector2( 4.14005, 4.14005 )
 
 [node name="elevator" parent="." instance=ExtResource( 8 )]
@@ -1820,7 +1824,6 @@ __meta__ = {
 }
 
 [node name="continue" type="Button" parent="CanvasLayer"]
-visible = false
 anchor_left = 0.428
 anchor_top = 0.367
 anchor_right = 0.571
@@ -1837,7 +1840,6 @@ __meta__ = {
 }
 
 [node name="exit" type="Button" parent="CanvasLayer"]
-visible = false
 anchor_left = 0.477
 anchor_top = 0.659
 anchor_right = 0.523
@@ -1854,7 +1856,6 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-visible = false
 anchor_left = 0.439
 anchor_top = 0.437
 anchor_right = 0.561
@@ -1869,14 +1870,23 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MusicSwitch" parent="CanvasLayer" instance=ExtResource( 23 )]
+position = Vector2( 1037.47, 619.306 )
+scale = Vector2( 9, 9 )
+
+[node name="SoundSwitch" parent="CanvasLayer" instance=ExtResource( 22 )]
+position = Vector2( 849.22, 623.39 )
+scale = Vector2( 8, 8 )
+
 [connection signal="lever_on" from="positive set/lever" to="positive set/movingplatform2" method="_on_lever_lever_on"]
 [connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
-[connection signal="glasses_up" from="Player" to="spikes" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="TileMap2/TileMap" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="TileMap2/TileMap" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="spikes" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="positive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
 [connection signal="pressed" from="CanvasLayer/continue" to="CanvasLayer" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/exit" to="CanvasLayer" method="_on_Button2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer" method="_on_mainmenu_pressed"]

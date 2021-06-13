@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -12,12 +12,8 @@
 [ext_resource path="res://sprites/key-pixel-art-1bit-icon-260nw-1343706884.png" type="Texture" id=10]
 [ext_resource path="res://sprites/door.png" type="Texture" id=11]
 [ext_resource path="res://scripts/Key.gd" type="Script" id=12]
-[ext_resource path="res://scenes/levels/Door.gd" type="Script" id=13]
+[ext_resource path="res://audio/sounds/collect_01.wav" type="AudioStream" id=13]
 [ext_resource path="res://scenes/fallingplatform.tscn" type="PackedScene" id=14]
-
-
-
-
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 19, 0, 19, 0, 0, 64, 0 )
@@ -155,7 +151,6 @@ anims/movingplatform = SubResource( 6 )
 
 [node name="Door" type="StaticBody2D" parent="."]
 position = Vector2( -117.385, 136.721 )
-script = ExtResource( 13 )
 
 [node name="Sprite" type="Sprite" parent="Door"]
 position = Vector2( 2.9502, -5.54767 )
@@ -174,7 +169,7 @@ position = Vector2( -2.37842, 5.94601 )
 shape = SubResource( 8 )
 
 [node name="Key" type="Sprite" parent="."]
-position = Vector2( 592.629, -221.28 )
+position = Vector2( 591.507, -221.841 )
 scale = Vector2( 0.379731, 0.460034 )
 texture = ExtResource( 10 )
 script = ExtResource( 12 )
@@ -188,7 +183,11 @@ __meta__ = {
 position = Vector2( 0, -16.4325 )
 shape = SubResource( 9 )
 
+[node name="Collect_sn" type="AudioStreamPlayer" parent="Key"]
+stream = ExtResource( 13 )
+
 [node name="fallingplatform" parent="." instance=ExtResource( 14 )]
+
 [connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Door/Area2D" to="Door" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Key/Area2D" to="Key" method="_on_Area2D_body_entered"]

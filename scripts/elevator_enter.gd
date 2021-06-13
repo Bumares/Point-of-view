@@ -31,6 +31,8 @@ func _ready():
 		sprite.set_scale(scalee)
 		get_node("../TileMap2/TileMap").occluder_light_mask = false
 		sprite.flip_h = true
+		if SoundController.sound_on == true:
+			$Elevator_sn.play()
 
 
 func _physics_process(delta):

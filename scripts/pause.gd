@@ -25,6 +25,7 @@ func _on_mainmenu_pressed():
 func set_visible(is_visible):
 	for node in get_children():
 		node.visible = is_visible
+	
 
 
 

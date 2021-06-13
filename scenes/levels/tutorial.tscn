@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scripts/pause.gd" type="Script" id=7]
 [ext_resource path="res://scenes/movingplatform.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scripts/tutorialtext.gd" type="Script" id=9]
+[ext_resource path="res://scenes/levels/tutorial.gd" type="Script" id=10]
 [ext_resource path="res://scripts/TileMap2.gd" type="Script" id=11]
 [ext_resource path="res://scripts/TileMap.gd" type="Script" id=12]
 [ext_resource path="res://scripts/depressive set.gd" type="Script" id=13]
@@ -1516,6 +1517,7 @@ font_data = ExtResource( 26 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 148.325, -78.4003 )
+script = ExtResource( 10 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( -1, 0 )
@@ -1921,11 +1923,12 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="Node2D/CanvasLayer"]
 
 [node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Node2D/bordery" to="Node2D/bordery" method="_on_Area2D_body_entered"]
 [connection signal="lever_on" from="Node2D/positive set/lever" to="Node2D/positive set/movingplatform2" method="_on_lever_lever_on"]
 [connection signal="body_entered" from="Node2D/bordery2" to="Node2D/bordery2" method="_on_Area2D_body_entered"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/depression" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Node2D/Player" to="Node2D/spikes" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Node2D/Player" to="Node2D/depression" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Node2D/Player" to="Node2D/positive set" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Node2D/Player" to="Node2D/TileMap2/TileMap" method="_on_Player_glasses_up"]
 [connection signal="pressed" from="Node2D/CanvasLayer2/continue" to="Node2D/CanvasLayer2" method="_on_Button_pressed"]

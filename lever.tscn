@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/lever.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Lever.png" type="Texture" id=2]
+[ext_resource path="res://audio/sounds/lever.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.4873, 10.7441 )
@@ -21,3 +22,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
+
+[node name="Lever_sn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

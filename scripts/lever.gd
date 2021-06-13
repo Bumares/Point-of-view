@@ -17,6 +17,8 @@ func _process(_delta):
 			state = "1"
 		else:
 			state = "0"
+		if SoundController.sound_on == true:
+			$Lever_sn.play()
 	if state == "0":
 		$Sprite.flip_h = false
 	else:

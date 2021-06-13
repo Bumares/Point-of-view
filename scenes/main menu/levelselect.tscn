@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://HelvetiPixel.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/levelselect.gd" type="Script" id=2]
 [ext_resource path="res://sprites/output-onlinepngtools (6).png" type="Texture" id=3]
+[ext_resource path="res://audio/sounds/selection.wav" type="AudioStream" id=4]
+[ext_resource path="res://scenes/musicswitch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/soundswitch.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 256
@@ -25,15 +28,15 @@ position = Vector2( 959.54, 540.286 )
 texture = ExtResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+margin_right = 1930.0
+margin_bottom = 1090.0
 rect_pivot_offset = Vector2( 481.744, 345.421 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 272.0
-margin_top = 88.0
-margin_right = 1648.0
-margin_bottom = 991.0
+margin_left = 277.0
+margin_top = 93.0
+margin_right = 1653.0
+margin_bottom = 996.0
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 1376.0
@@ -255,3 +258,14 @@ rect_min_size = Vector2( 472, 0 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Main Menu"
+
+[node name="ButtonSelection_sn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="MusicSwitch" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1185.32, 561.016 )
+scale = Vector2( 9, 9 )
+
+[node name="SoundSwitch" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1244.65, 662.725 )
+scale = Vector2( 8, 8 )

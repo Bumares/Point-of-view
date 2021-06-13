@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/depression.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://HelvetiPixel.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://scripts/positive set.gd" type="Script" id=14]
 [ext_resource path="res://scripts/pause.gd" type="Script" id=15]
+[ext_resource path="res://scenes/levels/level1.gd" type="Script" id=16]
 [ext_resource path="res://sprites/pngwing.com.png" type="Texture" id=18]
 [ext_resource path="res://sprites/bacground depressive1.png" type="Texture" id=19]
 [ext_resource path="res://sprites/609eefe0d1363.jpg" type="Texture" id=20]
@@ -1401,6 +1402,7 @@ font_data = ExtResource( 13 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 936.694, 263.948 )
+script = ExtResource( 16 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 440.564, 83.1236 )
@@ -1701,13 +1703,14 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="body_entered" from="Node2D/bordery" to="Node2D/bordery" method="_on_Area2D_body_entered"]
+[connection signal="glasses_up" from="Player" to="positive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="Node2D/Spike" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="Node2D/TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="Node2D/TileMap2/TileMap" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="Node2D/Spike" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="positive set" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
 [connection signal="pressed" from="CanvasLayer/continue" to="CanvasLayer" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/exit" to="CanvasLayer" method="_on_Button2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer" method="_on_mainmenu_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://sprites/elevator/elevator background.png" type="Texture" id=1]
 [ext_resource path="res://sprites/pngwing.com.png" type="Texture" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://sprites/elevator/elevator47.png" type="Texture" id=43]
 [ext_resource path="res://sprites/elevator/elevator_exit7.png" type="Texture" id=44]
 [ext_resource path="res://scripts/elevator_enter.gd" type="Script" id=45]
+[ext_resource path="res://audio/sounds/elevator_04.wav" type="AudioStream" id=46]
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/elevator61.png-3a05d06a5a7b33eee0097d54d60b353f.stex"
@@ -139,4 +140,9 @@ show_behind_parent = true
 position = Vector2( 4.91299, -3.4624 )
 z_index = 1
 occluder = SubResource( 10 )
+
+[node name="Elevator_sn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 46 )
+volume_db = -15.0
+
 [connection signal="body_entered" from="AnimatedSprite/Area2D" to="." method="_on_Area2D_body_entered"]
