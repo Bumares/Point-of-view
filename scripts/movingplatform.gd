@@ -5,7 +5,7 @@ export var move_distance = 50.0
 export var move_direction = Vector2(1,1)
 var time_since_init = 0.0
 var origin = Vector2(0,0)
-var lever = false
+export var lever = false
 
 
 func _ready():

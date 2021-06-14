@@ -1,4 +1,5 @@
-[gd_scene load_steps=81 format=2]
+[gd_scene load_steps=80 format=2]
+
 
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -9,7 +10,6 @@
 [ext_resource path="res://scripts/pause.gd" type="Script" id=7]
 [ext_resource path="res://scenes/movingplatform.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scripts/tutorialtext.gd" type="Script" id=9]
-[ext_resource path="res://scenes/levels/tutorial.gd" type="Script" id=10]
 [ext_resource path="res://scripts/TileMap2.gd" type="Script" id=11]
 [ext_resource path="res://scripts/TileMap.gd" type="Script" id=12]
 [ext_resource path="res://scripts/depressive set.gd" type="Script" id=13]
@@ -595,6 +595,7 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 256, 0, 64, 64 )
+
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
@@ -1390,6 +1391,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 [sub_resource type="OccluderPolygon2D" id=50]
 polygon = PoolVector2Array( -377.131, -269.347, -377.131, -273.613, -373.038, -273.588, -373.163, -278.028, -365.201, -278.028, -365.151, -290.951, -361.207, -290.975, -361.158, -295.316, -357.189, -295.341, -357.246, -299.658, -353.172, -299.611, -353.196, -304.036, -349.263, -304.013, -349.239, -308.297, -345.259, -308.32, -345.283, -312.628, -337.253, -312.628, -337.276, -316.982, -325.383, -316.959, -325.29, -321.29, -313.327, -321.267, -313.417, -320.91, -324.975, -320.96, -325.124, -316.743, -337.029, -316.743, -337.079, -312.477, -345.065, -312.477, -345.065, -308.013, -348.984, -308.112, -349.083, -303.747, -353.002, -303.846, -353.002, -299.58, -357.169, -299.53, -356.971, -295.264, -360.741, -295.214, -360.988, -290.8, -365.007, -290.75, -365.155, -277.952, -373.042, -277.853, -372.993, -273.388, -376.961, -273.537 )
 
+
 [sub_resource type="SegmentShape2D" id=51]
 a = Vector2( 2803.93, 1.79675 )
 b = Vector2( -2423.02, -43.0146 )
@@ -1648,6 +1650,7 @@ texture_scale = 0.8
 energy = 0.8
 shadow_enabled = true
 
+
 [node name="Light2D5" type="Light2D" parent="Node2D/depressive set"]
 visible = false
 position = Vector2( 1001.66, -656.378 )
@@ -1732,6 +1735,9 @@ jump_speed = -800
 
 [node name="elevator" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 1555.51, 471.953 )
+
+nextlevl = "res://scenes/levels/level1A.tscn"
+
 
 [node name="depression" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( -1051.58, 447.476 )
@@ -1927,10 +1933,10 @@ __meta__ = {
 [connection signal="body_entered" from="Node2D/bordery" to="Node2D/bordery" method="_on_Area2D_body_entered"]
 [connection signal="lever_on" from="Node2D/positive set/lever" to="Node2D/positive set/movingplatform2" method="_on_lever_lever_on"]
 [connection signal="body_entered" from="Node2D/bordery2" to="Node2D/bordery2" method="_on_Area2D_body_entered"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/spikes" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/depression" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Node2D/Player" to="Node2D/positive set" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Node2D/Player" to="Node2D/TileMap2/TileMap" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Node2D/Player" to="Node2D/spikes" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Node2D/Player" to="Node2D/positive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Node2D/Player" to="Node2D/depression" method="_on_Player_glasses_up"]
 [connection signal="pressed" from="Node2D/CanvasLayer2/continue" to="Node2D/CanvasLayer2" method="_on_Button_pressed"]
 [connection signal="pressed" from="Node2D/CanvasLayer2/exit" to="Node2D/CanvasLayer2" method="_on_Button2_pressed"]
 [connection signal="pressed" from="Node2D/CanvasLayer2/Button" to="Node2D/CanvasLayer2" method="_on_mainmenu_pressed"]

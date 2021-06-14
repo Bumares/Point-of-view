@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+
+const mainmenu = preload("res://scenes/main menu/MainMenu.tscn")
+
 func _ready():
 	set_visible(false)
 
@@ -25,7 +28,6 @@ func _on_mainmenu_pressed():
 func set_visible(is_visible):
 	for node in get_children():
 		node.visible = is_visible
-	
 
 
 

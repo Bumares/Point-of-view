@@ -1,14 +1,14 @@
 extends KinematicBody2D
 
-export (int) var run_speed = 200
-export (int) var jump_speed = -600
+export (int) var run_speed = 400
+export (int) var jump_speed = -800
 export (int) var gravity = 800
-export(int) var upSpeed = 5
-
+export(int) var upSpeed = 50
 var velocity = Vector2()
 var jumping = false
 var ladder_on = false
-
+var base_run_speed = run_speed
+var base_jump_speed = jump_speed
 var animation 
 var animation_playing = "idle"
 var velocityx = 0
@@ -32,16 +32,22 @@ func get_input():
 	var left = Input.is_action_pressed('ui_left')
 	var jump = Input.is_action_just_pressed('ui_select')
 	
-	if glasses == false and Input.is_action_just_pressed("E"):
+	if glasses == false and Input.is_action_just_pressed("E") and !right and !left and is_on_floor():
+		movement = false
 		glasses = true
+
 		if SoundController.sound_on == true:
 			$GlassesOn_sn.play()
+
 	
 	if (glasses == true and Input.is_action_just_pressed("E") and glasses_on == true) or ((left or right or jump) and glasses == true):
 		glasses_down = true
 		func1 = true
+
 		if SoundController.sound_on == true:
 			$GlassesOff_sn.play()
+		movement = false
+
 	
 	if movement == true:
 		if jump and is_on_floor():
@@ -107,6 +113,7 @@ func animation_play():
 func _on_animation_finished():
 	if $AnimatedSprite.frame == 10 and glasses == true and glasses_on == false:
 		glasses_on = true
+		movement = true
 		emit_signal("glasses_up", true)
 	return
 
@@ -117,6 +124,7 @@ func _on_glasses_finished():
 		glasses_down = false
 		glasses = false
 		func2 = true
+		movement = true
 	return
 
 
@@ -125,6 +133,12 @@ func _physics_process(delta):
 		get_input()
 		animation_play()
 		velocity.y += gravity * delta
+		if glasses_on == true:
+			run_speed = 0
+			jump_speed = 0
+		if glasses_down == true:
+			run_speed = base_run_speed
+			jump_speed = base_jump_speed
 		if jumping and is_on_floor():
 			jumping = false
 			

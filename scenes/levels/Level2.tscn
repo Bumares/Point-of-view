@@ -1,5 +1,6 @@
 [gd_scene load_steps=113 format=2]
 
+
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
@@ -1795,11 +1796,12 @@ run_speed = 400
 jump_speed = -800
 
 [node name="elevator_enter" parent="." instance=ExtResource( 7 )]
-position = Vector2( -960.457, 492.232 )
+position = Vector2( -950.413, 525.158 )
 scale = Vector2( 4.14005, 4.14005 )
 
 [node name="elevator" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1445.94, -296.847 )
+nextlevl = "res://scenes/levels/level3.tscn"
 
 [node name="depression" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1206.42, 377.624 )
@@ -1824,6 +1826,7 @@ __meta__ = {
 }
 
 [node name="continue" type="Button" parent="CanvasLayer"]
+visible = false
 anchor_left = 0.428
 anchor_top = 0.367
 anchor_right = 0.571
@@ -1840,6 +1843,7 @@ __meta__ = {
 }
 
 [node name="exit" type="Button" parent="CanvasLayer"]
+visible = false
 anchor_left = 0.477
 anchor_top = 0.659
 anchor_right = 0.523
@@ -1856,6 +1860,7 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="CanvasLayer"]
+visible = false
 anchor_left = 0.439
 anchor_top = 0.437
 anchor_right = 0.561
@@ -1871,6 +1876,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+
 [node name="MusicSwitch" parent="CanvasLayer" instance=ExtResource( 23 )]
 position = Vector2( 1037.47, 619.306 )
 scale = Vector2( 9, 9 )
@@ -1881,11 +1887,11 @@ scale = Vector2( 8, 8 )
 
 [connection signal="lever_on" from="positive set/lever" to="positive set/movingplatform2" method="_on_lever_lever_on"]
 [connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
-[connection signal="glasses_up" from="Player" to="TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="TileMap2/TileMap" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="spikes" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="positive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="spikes" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="TileMap2/TileMap" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
 [connection signal="pressed" from="CanvasLayer/continue" to="CanvasLayer" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/exit" to="CanvasLayer" method="_on_Button2_pressed"]

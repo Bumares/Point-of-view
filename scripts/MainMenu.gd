@@ -1,6 +1,5 @@
 extends MarginContainer
 
-const tutorial = preload("res://scenes/levels/level1.tscn")
 const levelselect = preload("res://scenes/main menu/levelselect.tscn")
 
 onready var selector_one = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
