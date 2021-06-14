@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+
 const mainmenu = preload("res://scenes/main menu/MainMenu.tscn")
 
 func _ready():

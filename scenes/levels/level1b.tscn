@@ -259,5 +259,6 @@ position = Vector2( -84.8012, 41.6022 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 1.25208, -5.3454 )
+
 [connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
 [connection signal="lever_on" from="lever" to="movingplatform2" method="_on_lever_lever_on"]

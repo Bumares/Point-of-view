@@ -29,6 +29,10 @@ func text1():
 		$Tween.interpolate_property(label,"percent_visible", 0.0, 1.0, 4)
 		$Tween.start()
 		precteno1 = true
+    
+		if SoundController.sound_on == true:
+			SoundController._play_typing()
+
 
 func text2():
 	label2.text = text2
@@ -36,6 +40,10 @@ func text2():
 		$Tween.interpolate_property(label2,"percent_visible", 0.0, 1.0, 4)
 		$Tween.start()
 		precteno2 = true
+
+		if SoundController.sound_on == true:
+			SoundController._play_typing()
+
 		
 func text3():
 	label3.text = text3
@@ -43,12 +51,20 @@ func text3():
 		$Tween.interpolate_property(label3,"percent_visible", 0.0, 1.0, 4)
 		$Tween.start()
 		precteno3 = true
+
+		if SoundController.sound_on == true:
+			SoundController._play_typing()
+
 func text4():
 	label4.text = text4
 	if precteno4 == false:
 		$Tween.interpolate_property(label4,"percent_visible", 0.0, 1.0, 4)
 		$Tween.start()
 		precteno4 = true
+
+		if SoundController.sound_on == true:
+			SoundController._play_typing()
+
 
 func _on_Timer_timeout():
 	value += 1

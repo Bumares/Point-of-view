@@ -35,22 +35,37 @@ func get_input():
 	if glasses == false and Input.is_action_just_pressed("E") and !right and !left and is_on_floor():
 		movement = false
 		glasses = true
-		
+
+		if SoundController.sound_on == true:
+			$GlassesOn_sn.play()
+
 	
 	if (glasses == true and Input.is_action_just_pressed("E") and glasses_on == true) or ((left or right or jump) and glasses == true):
 		glasses_down = true
 		func1 = true
+
+		if SoundController.sound_on == true:
+			$GlassesOff_sn.play()
 		movement = false
+
 	
 	if movement == true:
 		if jump and is_on_floor():
 			jumping = true
 			velocity.y = jump_speed
+			if SoundController.sound_on == true:
+				$Jump_sn.play()
 		if right:
 			velocity.x += run_speed
 		elif left:
 			velocity.x -= run_speed
-			
+	
+	if SoundController.sound_on == true:
+		if velocity.x != 0 and is_on_floor():
+			if !$Run_sn.playing:
+				$Run_sn.play()
+		elif $Run_sn.playing:
+				$Run_sn.stop()
 		
 	
 

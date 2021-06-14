@@ -60,8 +60,11 @@ PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
+MusicController="*res://scenes/musiccontroller.tscn"
+SoundController="*res://scenes/soundcontroller.tscn"
 
 [display]
+
 
 window/size/width=1920
 window/size/height=1080

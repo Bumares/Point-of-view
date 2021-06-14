@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/typing_01.wav-5ddb099fac0203d849ed74f65f653ca0.sample"
+
+[deps]
+
+source_file="res://audio/sounds/typing_01.wav"
+dest_files=[ "res://.import/typing_01.wav-5ddb099fac0203d849ed74f65f653ca0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
