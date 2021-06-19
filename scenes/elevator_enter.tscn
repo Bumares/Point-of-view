@@ -92,7 +92,7 @@ scale = Vector2( 3.886, 3.886 )
 script = ExtResource( 45 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-z_index = 1
+z_index = 2
 z_as_relative = false
 frames = SubResource( 5 )
 animation = "idle"
@@ -144,5 +144,4 @@ occluder = SubResource( 10 )
 [node name="Elevator_sn" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 46 )
 volume_db = -15.0
-
 [connection signal="body_entered" from="AnimatedSprite/Area2D" to="." method="_on_Area2D_body_entered"]

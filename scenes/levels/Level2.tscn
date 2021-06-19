@@ -1,6 +1,5 @@
 [gd_scene load_steps=113 format=2]
 
-
 [ext_resource path="res://scripts/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
@@ -1792,8 +1791,6 @@ script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -595.128, 506.647 )
-run_speed = 400
-jump_speed = -800
 
 [node name="elevator_enter" parent="." instance=ExtResource( 7 )]
 position = Vector2( -950.413, 525.158 )
@@ -1876,7 +1873,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-
 [node name="MusicSwitch" parent="CanvasLayer" instance=ExtResource( 23 )]
 position = Vector2( 1037.47, 619.306 )
 scale = Vector2( 9, 9 )
@@ -1884,14 +1880,13 @@ scale = Vector2( 9, 9 )
 [node name="SoundSwitch" parent="CanvasLayer" instance=ExtResource( 22 )]
 position = Vector2( 849.22, 623.39 )
 scale = Vector2( 8, 8 )
-
 [connection signal="lever_on" from="positive set/lever" to="positive set/movingplatform2" method="_on_lever_lever_on"]
 [connection signal="body_entered" from="bordery" to="bordery" method="_on_Area2D_body_entered"]
-[connection signal="glasses_up" from="Player" to="positive set" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="spikes" method="_on_Player_glasses_up"]
-[connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="positive set" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="TileMap2/TileMap" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="TileMap2/TileMap deprese" method="_on_Player_glasses_up"]
+[connection signal="glasses_up" from="Player" to="depressive set" method="_on_Player_glasses_up"]
 [connection signal="glasses_up" from="Player" to="depression" method="_on_Player_glasses_up"]
 [connection signal="pressed" from="CanvasLayer/continue" to="CanvasLayer" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/exit" to="CanvasLayer" method="_on_Button2_pressed"]

@@ -22,9 +22,12 @@ func _on_Area2D_body_entered(body):
 		$AnimatedSprite/Light2D.visible = true
 		inelevator = true
 		timer.start()
+	
+
 
 func _physics_process(delta):
 	if inelevator == true:
+		
 		
 		vysledek_x = abs(stepify(player.position.x, 1) - stepify(global_position.x, 1))
 		vysledek_y = abs(stepify(player.position.y, 1) - stepify(global_position.y, 1))
@@ -44,6 +47,9 @@ func _physics_process(delta):
 			scalee = scalee + Vector2(-0.005, -0.005)
 			player.position.y = player.position.y - 1
 			sprite.set_scale(scalee)
+			
+		if SoundController.sound_on == true:
+			$Elevator_sn.play()
 
 func _ready():
 	timer.set_wait_time(7)

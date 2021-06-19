@@ -1,6 +1,8 @@
-extends MarginContainer
+extends Node
 
 const levelselect = preload("res://scenes/main menu/levelselect.tscn")
+
+onready var count = 1
 
 onready var selector_one = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
 onready var selector_two = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/Selector
@@ -14,6 +16,8 @@ func _ready():
 	MusicController._play_music()
 
 func _process(delta):
+	print (count)
+	count = count + 1
 	if Input.is_action_just_pressed("ui_down") and current_selection < 2:
 		current_selection += 1
 		set_current_selection(current_selection)

@@ -7,7 +7,6 @@
 [ext_resource path="res://scenes/musicswitch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/soundswitch.tscn" type="PackedScene" id=6]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 256
 font_data = ExtResource( 1 )
@@ -29,15 +28,15 @@ position = Vector2( 959.54, 540.286 )
 texture = ExtResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 1930.0
-margin_bottom = 1090.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 rect_pivot_offset = Vector2( 481.744, 345.421 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 277.0
-margin_top = 93.0
-margin_right = 1653.0
-margin_bottom = 996.0
+margin_left = 272.0
+margin_top = 88.0
+margin_right = 1648.0
+margin_bottom = 991.0
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 1376.0

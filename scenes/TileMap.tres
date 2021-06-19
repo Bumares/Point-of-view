@@ -1,0 +1,379 @@
+[gd_resource type="TileSet" load_steps=22 format=2]
+
+[ext_resource path="res://sprites/tiles/tileset depression v02.png" type="Texture" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 0, 56.0942, 4.05753, 56.1956, 3.94934, 59.9818, 8.00592, 60.0359, 8.06003, 56.1956, 11.9003, 56.0875, 12.0084, 59.9818, 16.1191, 59.9886, 16.065, 64, 23.9077, 64, 23.9619, 60.2522, 32.075, 60.1982, 31.9669, 56.0334, 47.9228, 56.0334, 47.9768, 60.1508, 56.0359, 60.09, 56.09, 64, 64, 64, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+polygon = PoolVector2Array( 60.0886, 4.00875, 60.0345, 0, 3.99951, 0, 3.99951, 4.06284, 0, 4.06284, 0, 63.9786, 64, 63.9246, 64, 4.00875 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=6]
+polygon = PoolVector2Array( 0.0510864, 63.9147, 4.05359, 64, 3.9454, 60.1285, 7.89383, 60.0744, 8.00198, 56.1801, 11.9504, 56.126, 11.9504, 59.8581, 16.007, 59.9663, 16.1152, 64, 24.0661, 63.9688, 23.9579, 60.1285, 31.8547, 60.0204, 32.017, 56.126, 47.9729, 56.126, 47.9188, 60.0744, 55.9238, 60.0204, 55.8698, 64, 64, 64, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( 3.9454, 0, 3.89133, 4.08563, 0, 4.13974, 0, 64, 3.99951, 64, 3.9454, 59.8367, 7.89383, 59.9449, 8.00198, 56.0505, 12.0586, 55.9964, 11.9504, 59.9043, 16.007, 60.1071, 16.007, 64, 24.0661, 64, 23.9038, 59.8908, 31.9629, 59.9989, 32.017, 55.9424, 48.0811, 56.1046, 47.9188, 59.8908, 56.032, 60.1071, 56.0861, 64, 64, 64, 63.9288, 4.08563, 59.9263, 4.03156, 59.9263, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=8]
+polygon = PoolVector2Array( 0.052948, 56.0864, 4.00137, 56.0864, 3.9473, 60.0009, 8.05795, 59.9266, 7.94977, 55.9782, 12.0064, 55.9782, 12.0064, 59.9469, 15.9548, 60.0348, 16.0089, 64, 24.068, 64, 23.9598, 60.0348, 32.0189, 59.9266, 32.127, 56.0323, 48.0289, 56.1404, 47.9748, 59.9807, 55.9257, 60.0889, 55.9798, 64, 64, 64, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=9]
+polygon = PoolVector2Array( 0.0817261, 60.055, 4.03014, 60.0009, 3.97604, 56.0526, 12.0351, 56.1066, 11.981, 60.0009, 15.8754, 60.055, 15.9295, 64, 19.932, 64, 19.8238, 60.055, 23.9886, 60.0009, 23.9345, 55.9444, 27.937, 55.9984, 28.0992, 52.1041, 31.8854, 52.1041, 31.9395, 56.2148, 35.8879, 56.2689, 35.8879, 60.1091, 52.006, 60.1091, 51.952, 56.1066, 64, 56.0526, 63.9054, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=10]
+polygon = PoolVector2Array( 0.101318, 55.9444, 7.94406, 55.9984, 7.99814, 51.9959, 12.0006, 52.05, 11.9466, 55.9444, 16.0572, 56.0526, 15.9491, 60.0009, 24.0081, 60.0009, 24.0622, 56.0526, 32.0672, 55.8903, 31.9591, 52.05, 48.1313, 52.1041, 48.0772, 56.1066, 55.9741, 56.1066, 55.9741, 60.0009, 64, 60.0009, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=11]
+polygon = PoolVector2Array( 0.00959778, 59.9807, 11.963, 59.9807, 11.8548, 64, 15.9655, 64, 15.9655, 56.0323, 19.8598, 56.0323, 19.9139, 44.0248, 23.9705, 44.0789, 23.9164, 47.9191, 27.9189, 48.0814, 27.9189, 51.9757, 24.0246, 52.0298, 23.8623, 55.9241, 28.0812, 55.9241, 28.0271, 60.0889, 31.9755, 60.0889, 31.9755, 64, 35.978, 63.9832, 36.0862, 59.9807, 59.993, 59.9266, 59.993, 55.87, 64, 55.9782, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=12]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=13]
+polygon = PoolVector2Array( 0, 59.8928, 4.00875, 59.8928, 3.95467, 55.9984, 7.95716, 55.9984, 7.95716, 51.9959, 12.1219, 52.05, 11.9597, 56.1066, 15.9622, 56.1607, 15.9622, 60.0009, 23.9131, 60.055, 24.0213, 56.0526, 31.9722, 56.0526, 32.1344, 51.9959, 47.874, 52.1041, 47.9822, 56.0526, 55.9872, 56.1066, 55.879, 60.055, 64, 60.055, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=14]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=15]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=16]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=17]
+polygon = PoolVector2Array( 0, 64, 4.00875, 63.7815, 4.06284, 59.9953, 8.17352, 59.9615, 8.11943, 56.0469, 11.8515, 56.101, 12.0138, 60.0156, 15.9081, 59.9953, 16.0163, 64, 24.0213, 64, 24.1835, 59.9412, 31.864, 59.9412, 32.0803, 56.0469, 48.0363, 56.101, 48.0363, 59.8871, 56.0953, 59.9412, 55.9331, 64, 64, 63.9978, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=18]
+polygon = PoolVector2Array( 0.100349, 59.9615, 11.9456, 59.9615, 12.1078, 63.964, 16.0022, 63.9099, 16.0022, 56.0131, 19.8965, 56.0131, 20.0588, 44.0056, 23.899, 44.1138, 23.899, 47.8458, 28.0638, 48.0622, 27.8474, 51.9565, 24.1153, 52.0647, 24.0072, 56.1213, 28.0097, 56.0672, 28.0097, 59.8533, 32.0663, 59.9074, 32.0663, 64, 35.9065, 63.964, 36.0688, 60.1238, 59.9215, 60.0697, 59.9215, 56.0672, 63.8699, 56.0131, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=19]
+polygon = PoolVector2Array( 0.0321655, 60.0156, 7.929, 59.9074, 7.87491, 56.1213, 12.0938, 56.0131, 12.2019, 60.0697, 15.8799, 59.8533, 16.0422, 63.8558, 24.0472, 63.964, 23.9931, 60.0156, 31.944, 60.0156, 31.9981, 56.0131, 47.8999, 56.1213, 47.954, 59.7452, 56.0131, 59.9615, 55.959, 64, 63.964, 64, 64, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=20]
+polygon = PoolVector2Array( 0.126266, 55.8846, 3.91241, 55.8846, 3.85834, 51.9903, 11.9715, 52.0444, 12.0256, 55.8846, 15.974, 56.0469, 15.9199, 59.9412, 19.9224, 59.9953, 20.0306, 56.101, 23.9249, 56.1551, 23.979, 52.0444, 27.9815, 51.9903, 28.0897, 48.2042, 32.2004, 48.1501, 32.1463, 52.1526, 35.8783, 52.0985, 36.0406, 55.8846, 51.9424, 55.8846, 51.9965, 52.0985, 63.9499, 52.0444, 63.9499, 0, 0, 0.120071 )
+
+[resource]
+0/name = "tileset depression v02.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 1 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "tileset depression v02.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 64, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 2 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "tileset depression v02.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 256, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/occluder = SubResource( 12 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "tileset depression v02.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 64, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/occluder = SubResource( 14 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "tileset depression v02.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 64, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/occluder = SubResource( 15 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "tileset depression v02.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 256, 64, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/occluder = SubResource( 16 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "tileset depression v02.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 128, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/occluder = SubResource( 17 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "tileset depression v02.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 128, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/occluder = SubResource( 18 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "tileset depression v02.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 128, 128, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/occluder = SubResource( 19 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "tileset depression v02.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 192, 128, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/occluder = SubResource( 20 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "tileset depression v02.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 256, 128, 64, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/occluder = SubResource( 3 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "tileset depression v02.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 384, 0, 64, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/occluder = SubResource( 4 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "tileset depression v02.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 384, 64, 64, 64 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/occluder = SubResource( 5 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "tileset depression v02.png 13"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 384, 128, 64, 64 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/occluder = SubResource( 6 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "tileset depression v02.png 14"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 512, 192, 64, 64 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "tileset depression v02.png 15"
+15/texture = ExtResource( 1 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 384, 256, 64, 64 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/occluder = SubResource( 7 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "tileset depression v02.png 16"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 256, 256, 64, 64 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/occluder = SubResource( 8 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "tileset depression v02.png 17"
+17/texture = ExtResource( 1 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 192, 256, 64, 64 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/occluder = SubResource( 9 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "tileset depression v02.png 18"
+18/texture = ExtResource( 1 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 128, 256, 64, 64 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/occluder = SubResource( 10 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "tileset depression v02.png 19"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 64, 256, 64, 64 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/occluder = SubResource( 11 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "tileset depression v02.png 20"
+20/texture = ExtResource( 1 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 256, 64, 64 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/occluder = SubResource( 13 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
