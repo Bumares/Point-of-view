@@ -1,6 +1,7 @@
-extends MarginContainer
+extends Node
 
 const levelselect = preload("res://scenes/main menu/levelselect.tscn")
+
 
 onready var selector_one = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
 onready var selector_two = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/Selector

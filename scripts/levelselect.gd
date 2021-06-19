@@ -39,13 +39,13 @@ func handle_selection(_currnet_selection):
 		get_tree().change_scene("res://scenes/levels/level1A.tscn")
 		queue_free()
 	if current_selection == 1:
-		get_tree().change_scene("res://scenes/levels/Level2.tscn")
+		get_tree().change_scene("res://scenes/levels/level2 - Copy.tscn")
 		queue_free()
 	if current_selection == 2:
-		get_tree().change_scene("res://scenes/levels/Level3.tscn")
+		get_tree().change_scene("res://scenes/levels/level3 - Copy.tscn")
 		queue_free()
 	if current_selection == 3:
-		get_tree().change_scene("res://scenes/levels/Level4.tscn")
+		get_tree().change_scene("res://scenes/levels/level4 - Copy.tscn")
 		queue_free()
 	if current_selection == 4:
 		get_tree().change_scene("res://scenes/levels/tutorial.tscn")

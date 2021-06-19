@@ -21,6 +21,7 @@ func _on_Button2_pressed(): #exit
 	set_visible(false)
 	
 func _on_mainmenu_pressed():
+	get_tree().paused = false
 	get_tree().change_scene("res://scenes/main menu/MainMenu.tscn")
 	queue_free()
 

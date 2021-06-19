@@ -29,7 +29,7 @@ func text1():
 		$Tween.interpolate_property(label,"percent_visible", 0.0, 1.0, 4)
 		$Tween.start()
 		precteno1 = true
-    
+	
 		if SoundController.sound_on == true:
 			SoundController._play_typing()
 

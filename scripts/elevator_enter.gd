@@ -31,6 +31,7 @@ func _ready():
 		sprite.set_scale(scalee)
 		get_node("../TileMap2/TileMap").occluder_light_mask = false
 		sprite.flip_h = true
+		
 		if SoundController.sound_on == true:
 			$Elevator_sn.play()
 
@@ -38,9 +39,10 @@ func _ready():
 func _physics_process(delta):
 	if $AnimatedSprite.frame >= 32 and enter_elevator == true:
 		player.inelevator = false
-		player.z_index = 2
+		player.z_index = 3
 		lightoc.visible = true
 		sprite.flip_h = false
+		
 		
 		if setposition == true:
 			vysledek_x = abs(stepify(player.position.x, 1)) - 100
